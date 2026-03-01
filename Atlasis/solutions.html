@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis — Solutions</title>
+    <meta name="description"
+        content="Des solutions intelligentes pour des infrastructures complexes. Cloud IA, Sécurité avancée, Automatisation à grande échelle.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="solutions.css">
+</head>
+
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link active">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                                        <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====================================================
+             1. HERO — Glassmorphism + Particules
+             ==================================================== -->
+        <section class="sol-hero">
+            <canvas class="sol-hero-canvas" aria-hidden="true"></canvas>
+
+            <!-- Grid lines déco -->
+            <div class="sol-hero-grid" aria-hidden="true"></div>
+
+            <!-- Orbes de lumière -->
+            <div class="sol-orb sol-orb--1" aria-hidden="true"></div>
+            <div class="sol-orb sol-orb--2" aria-hidden="true"></div>
+            <div class="sol-orb sol-orb--3" aria-hidden="true"></div>
+
+            <div class="sol-hero-content container">
+
+                <!-- Badge -->
+                <div class="sol-hero-badge reveal stagger-1">
+                    <span class="sol-badge-dot"></span>
+                    <span>Plateforme de nouvelle génération</span>
+                </div>
+
+                <!-- Glassmorphism card autour du titre -->
+                <div class="sol-hero-glass reveal stagger-2">
+                    <h1 class="sol-hero-title">
+                        Des solutions <span class="sol-title-accent">intelligentes</span><br>
+                        pour des infrastructures<br>
+                        <span class="sol-title-outline">complexes</span>
+                    </h1>
+                </div>
+
+                <p class="sol-hero-desc reveal stagger-3">
+                    Atlasis unifie Cloud IA, sécurité de pointe et automatisation avancée<br>
+                    dans une seule plateforme pensée pour évoluer à votre rythme.
+                </p>
+
+                <!-- Metrics row -->
+                <div class="sol-hero-metrics reveal stagger-4">
+                    <div class="sol-metric">
+                        <span class="sol-metric-value">99.9%</span>
+                        <span class="sol-metric-label">Disponibilité</span>
+                    </div>
+                    <div class="sol-metric-sep"></div>
+                    <div class="sol-metric">
+                        <span class="sol-metric-value">200+</span>
+                        <span class="sol-metric-label">Intégrations</span>
+                    </div>
+                    <div class="sol-metric-sep"></div>
+                    <div class="sol-metric">
+                        <span class="sol-metric-value">&lt; 60s</span>
+                        <span class="sol-metric-label">Déploiement</span>
+                    </div>
+                    <div class="sol-metric-sep"></div>
+                    <div class="sol-metric">
+                        <span class="sol-metric-value">500+</span>
+                        <span class="sol-metric-label">Entreprises</span>
+                    </div>
+                </div>
+
+                <!-- Scroll hint -->
+                <div class="sol-scroll-hint reveal stagger-5" aria-hidden="true">
+                    <span class="sol-scroll-line"></span>
+                    <span class="sol-scroll-label">Découvrir</span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             2. GRILLE DE SOLUTIONS — 3 grandes cartes verticales
+             ==================================================== -->
+        <section class="sol-cards" id="solutions">
+            <div class="container">
+
+                <div class="sol-section-header reveal stagger-1">
+                    <span class="sol-label">Nos solutions</span>
+                    <h2 class="sol-section-title">Trois piliers,<br>une seule plateforme</h2>
+                </div>
+
+                <div class="sol-cards-grid">
+
+                    <!-- Card 1 — Cloud IA -->
+                    <div class="sol-card reveal stagger-1" data-accent="#0066FF">
+                        <div class="sol-card-glow"></div>
+                        <div class="sol-card-top">
+                            <div class="sol-card-icon-wrap">
+                                <iconify-icon icon="solar:cpu-bolt-bold-duotone" class="sol-card-icon"></iconify-icon>
+                            </div>
+                            <span class="sol-card-tag">Cloud IA</span>
+                        </div>
+                        <h3 class="sol-card-title">Infrastructure Cloud<br>propulsée par l'IA</h3>
+                        <p class="sol-card-desc">Déployez, orchestrez et faites évoluer vos workloads sur une
+                            infrastructure globale optimisée en temps réel par notre moteur IA. Réduction des coûts
+                            garantie.</p>
+                        <ul class="sol-card-features">
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Auto-scaling
+                                intelligent</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Multi-cloud & edge
+                                computing</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Prédiction de
+                                charge prédictive</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Dashboard temps
+                                réel unifié</li>
+                        </ul>
+                        <a href="#" class="sol-card-cta">
+                            Explorer la solution
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                        <!-- Decorative number -->
+                        <span class="sol-card-number">01</span>
+                    </div>
+
+                    <!-- Card 2 — Sécurité (featured) -->
+                    <div class="sol-card sol-card--featured reveal stagger-2" data-accent="#0066FF">
+                        <div class="sol-card-glow"></div>
+                        <div class="sol-card-featured-badge">Populaire</div>
+                        <div class="sol-card-top">
+                            <div class="sol-card-icon-wrap">
+                                <iconify-icon icon="solar:shield-keyhole-bold-duotone"
+                                    class="sol-card-icon"></iconify-icon>
+                            </div>
+                            <span class="sol-card-tag">Sécurité</span>
+                        </div>
+                        <h3 class="sol-card-title">Sécurité Zero-Trust<br>de niveau entreprise</h3>
+                        <p class="sol-card-desc">Protégez chaque couche de votre infrastructure avec une architecture
+                            Zero-Trust, une détection des menaces en temps réel et une conformité automatisée.</p>
+                        <ul class="sol-card-features">
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Architecture
+                                Zero-Trust native</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> SOC IA 24/7
+                                automatisé</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Conformité RGPD /
+                                ISO 27001</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Chiffrement
+                                end-to-end</li>
+                        </ul>
+                        <a href="#" class="sol-card-cta">
+                            Explorer la solution
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                        <span class="sol-card-number">02</span>
+                    </div>
+
+                    <!-- Card 3 — Automatisation -->
+                    <div class="sol-card reveal stagger-3" data-accent="#0066FF">
+                        <div class="sol-card-glow"></div>
+                        <div class="sol-card-top">
+                            <div class="sol-card-icon-wrap">
+                                <iconify-icon icon="solar:settings-minimalistic-bold-duotone"
+                                    class="sol-card-icon"></iconify-icon>
+                            </div>
+                            <span class="sol-card-tag">Automatisation</span>
+                        </div>
+                        <h3 class="sol-card-title">Automatisation<br>opérationnelle totale</h3>
+                        <p class="sol-card-desc">Éliminez les tâches répétitives et les erreurs humaines grâce à nos
+                            pipelines d'automatisation pilotés par IA. De l'onboarding aux déploiements complexes.</p>
+                        <ul class="sol-card-features">
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Workflows no-code /
+                                low-code</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> CI/CD pipeline
+                                intelligent</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> RPA & orchestration
+                                d'agents</li>
+                            <li><iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon> Alertes et
+                                remédiation auto</li>
+                        </ul>
+                        <a href="#" class="sol-card-cta">
+                            Explorer la solution
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                        <span class="sol-card-number">03</span>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             3. COMMENT ÇA MARCHE — Zig-Zag
+             ==================================================== -->
+        <section class="sol-process" id="process">
+
+            <div class="container">
+                <div class="sol-section-header reveal stagger-1">
+                    <span class="sol-label">Le processus</span>
+                    <h2 class="sol-section-title">Comment ça marche</h2>
+                    <p class="sol-section-sub">Un onboarding guidé en quatre étapes, de la connexion au déploiement en
+                        production.</p>
+                </div>
+            </div>
+
+            <!-- Step 1 — Image gauche / Texte droite -->
+            <div class="sol-step sol-step--normal">
+                <div class="container">
+                    <div class="sol-step-inner">
+                        <div class="sol-step-visual reveal stagger-1">
+                            <div class="sol-step-screen">
+                                <div class="sol-screen-header">
+                                    <span class="sol-screen-dot red"></span>
+                                    <span class="sol-screen-dot yellow"></span>
+                                    <span class="sol-screen-dot green"></span>
+                                    <span class="sol-screen-title">Connexion API</span>
+                                </div>
+                                <div class="sol-screen-body">
+                                    <div class="sol-screen-line sol-screen-line--blue" style="width:70%"></div>
+                                    <div class="sol-screen-line" style="width:50%"></div>
+                                    <div class="sol-screen-pulse">
+                                        <iconify-icon icon="solar:link-bold-duotone"></iconify-icon>
+                                        <span>Connexion établie</span>
+                                    </div>
+                                    <div class="sol-screen-line" style="width:80%"></div>
+                                    <div class="sol-screen-line" style="width:40%"></div>
+                                </div>
+                            </div>
+                            <div class="sol-step-num-bg">01</div>
+                        </div>
+                        <div class="sol-step-content reveal stagger-2">
+                            <span class="sol-step-badge">Étape 01</span>
+                            <h3 class="sol-step-title">Connexion en<br>quelques minutes</h3>
+                            <p class="sol-step-desc">Intégrez Atlasis à votre stack existant via notre API REST ou nos
+                                connecteurs natifs. Aucun changement d'architecture requis — notre moteur s'adapte à
+                                vous, pas l'inverse.</p>
+                            <div class="sol-step-tags">
+                                <span>API REST</span>
+                                <span>SDK Python / JS</span>
+                                <span>Webhooks</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2 — Texte gauche / Image droite -->
+            <div class="sol-step sol-step--reverse">
+                <div class="container">
+                    <div class="sol-step-inner">
+                        <div class="sol-step-content reveal stagger-1">
+                            <span class="sol-step-badge">Étape 02</span>
+                            <h3 class="sol-step-title">L'IA analyse<br>votre environnement</h3>
+                            <p class="sol-step-desc">Notre moteur d'analyse cartographie automatiquement vos ressources,
+                                détecte les anomalies et génère un rapport de santé complet sous 5 minutes.</p>
+                            <div class="sol-step-tags">
+                                <span>Analyse auto</span>
+                                <span>Cartographie</span>
+                                <span>Rapport IA</span>
+                            </div>
+                        </div>
+                        <div class="sol-step-visual reveal stagger-2">
+                            <div class="sol-step-screen">
+                                <div class="sol-screen-header">
+                                    <span class="sol-screen-dot red"></span>
+                                    <span class="sol-screen-dot yellow"></span>
+                                    <span class="sol-screen-dot green"></span>
+                                    <span class="sol-screen-title">Analyse IA</span>
+                                </div>
+                                <div class="sol-screen-body">
+                                    <div class="sol-screen-bars">
+                                        <div class="sol-bar" style="height:60%"></div>
+                                        <div class="sol-bar" style="height:85%"></div>
+                                        <div class="sol-bar" style="height:45%"></div>
+                                        <div class="sol-bar sol-bar--accent" style="height:95%"></div>
+                                        <div class="sol-bar" style="height:70%"></div>
+                                        <div class="sol-bar" style="height:55%"></div>
+                                    </div>
+                                    <div class="sol-screen-pulse">
+                                        <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                                        <span>Analyse terminée — 94% sain</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sol-step-num-bg">02</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 3 — Image gauche / Texte droite -->
+            <div class="sol-step sol-step--normal">
+                <div class="container">
+                    <div class="sol-step-inner">
+                        <div class="sol-step-visual reveal stagger-1">
+                            <div class="sol-step-screen">
+                                <div class="sol-screen-header">
+                                    <span class="sol-screen-dot red"></span>
+                                    <span class="sol-screen-dot yellow"></span>
+                                    <span class="sol-screen-dot green"></span>
+                                    <span class="sol-screen-title">Déploiement</span>
+                                </div>
+                                <div class="sol-screen-body">
+                                    <div class="sol-deploy-row">
+                                        <iconify-icon icon="solar:rocket-2-bold-duotone"></iconify-icon>
+                                        <div class="sol-deploy-bar">
+                                            <div class="sol-deploy-fill"></div>
+                                        </div>
+                                        <span class="sol-deploy-pct">100%</span>
+                                    </div>
+                                    <div class="sol-screen-line" style="width:60%"></div>
+                                    <div class="sol-screen-pulse">
+                                        <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                        <span>Production — En ligne</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sol-step-num-bg">03</div>
+                        </div>
+                        <div class="sol-step-content reveal stagger-2">
+                            <span class="sol-step-badge">Étape 03</span>
+                            <h3 class="sol-step-title">Déployez en<br>production en 60 sec</h3>
+                            <p class="sol-step-desc">Un clic suffit pour pousser vos configurations validées en
+                                production. Rollback instantané en cas d'anomalie, zéro downtime garanti par notre
+                                architecture blue/green.</p>
+                            <div class="sol-step-tags">
+                                <span>Blue/Green Deploy</span>
+                                <span>Rollback auto</span>
+                                <span>Zéro downtime</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 4 — Texte gauche / Image droite -->
+            <div class="sol-step sol-step--reverse">
+                <div class="container">
+                    <div class="sol-step-inner">
+                        <div class="sol-step-content reveal stagger-1">
+                            <span class="sol-step-badge">Étape 04</span>
+                            <h3 class="sol-step-title">Pilotez, optimisez,<br>itérez en continu</h3>
+                            <p class="sol-step-desc">Notre dashboard unifié consolide toutes vos métriques. L'IA génère
+                                des recommandations proactives et déclenche des optimisations automatiques pour
+                                maximiser la performance.</p>
+                            <div class="sol-step-tags">
+                                <span>Dashboard unifié</span>
+                                <span>Recommandations IA</span>
+                                <span>Optimisation auto</span>
+                            </div>
+                        </div>
+                        <div class="sol-step-visual reveal stagger-2">
+                            <div class="sol-step-screen">
+                                <div class="sol-screen-header">
+                                    <span class="sol-screen-dot red"></span>
+                                    <span class="sol-screen-dot yellow"></span>
+                                    <span class="sol-screen-dot green"></span>
+                                    <span class="sol-screen-title">Dashboard</span>
+                                </div>
+                                <div class="sol-screen-body">
+                                    <div class="sol-mini-cards">
+                                        <div class="sol-mini-card">
+                                            <span class="sol-mini-val">↑ 40%</span>
+                                            <span class="sol-mini-lbl">Perf.</span>
+                                        </div>
+                                        <div class="sol-mini-card sol-mini-card--accent">
+                                            <span class="sol-mini-val">↓ 28%</span>
+                                            <span class="sol-mini-lbl">Coûts</span>
+                                        </div>
+                                    </div>
+                                    <div class="sol-screen-line" style="width:75%"></div>
+                                    <div class="sol-screen-line" style="width:50%"></div>
+                                </div>
+                            </div>
+                            <div class="sol-step-num-bg">04</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- ====================================================
+             4. ÉCOSYSTÈME D'INTÉGRATION — Grille statique
+             ==================================================== -->
+        <section class="sol-ecosystem" id="ecosystem">
+            <div class="container">
+
+                <div class="sol-section-header reveal stagger-1">
+                    <span class="sol-label">Intégrations</span>
+                    <h2 class="sol-section-title">S'intègre à votre flux<br>de travail actuel</h2>
+                    <p class="sol-section-sub">200+ connecteurs natifs. Votre stack reste intact, Atlasis l'amplifie.
+                    </p>
+                </div>
+
+                <!-- Catégories + logos -->
+                <div class="sol-eco-grid reveal stagger-2">
+
+                    <div class="sol-eco-category">
+                        <span class="sol-eco-cat-label">Communication</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo" title="Slack"><iconify-icon
+                                    icon="logos:slack-icon"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Discord"><iconify-icon
+                                    icon="logos:discord-icon"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Zoom"><iconify-icon icon="logos:zoom-icon"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-eco-category">
+                        <span class="sol-eco-cat-label">Développement</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo" title="GitHub"><iconify-icon
+                                    icon="logos:github-icon"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="GitLab"><iconify-icon icon="logos:gitlab"></iconify-icon>
+                            </div>
+                            <div class="sol-eco-logo" title="Figma"><iconify-icon icon="logos:figma"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-eco-category">
+                        <span class="sol-eco-cat-label">Cloud & Infra</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo" title="AWS"><iconify-icon icon="logos:aws"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Google Cloud"><iconify-icon
+                                    icon="logos:google-cloud"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Docker"><iconify-icon
+                                    icon="logos:docker-icon"></iconify-icon></div>
+                        </div>
+                    </div>
+
+                    <div class="sol-eco-category">
+                        <span class="sol-eco-cat-label">Productivité</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo" title="Notion"><iconify-icon
+                                    icon="logos:notion-icon"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Trello"><iconify-icon icon="logos:trello"></iconify-icon>
+                            </div>
+                            <div class="sol-eco-logo" title="Google Drive"><iconify-icon
+                                    icon="logos:google-drive"></iconify-icon></div>
+                        </div>
+                    </div>
+
+                    <div class="sol-eco-category">
+                        <span class="sol-eco-cat-label">Data & Analytics</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo" title="Dropbox"><iconify-icon icon="logos:dropbox"></iconify-icon>
+                            </div>
+                            <div class="sol-eco-logo" title="Kubernetes"><iconify-icon
+                                    icon="logos:kubernetes"></iconify-icon></div>
+                            <div class="sol-eco-logo" title="Redis"><iconify-icon icon="logos:redis"></iconify-icon>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sol-eco-category sol-eco-category--more">
+                        <span class="sol-eco-cat-label">Et bien plus</span>
+                        <div class="sol-eco-logos">
+                            <div class="sol-eco-logo sol-eco-logo--count">
+                                <span>190+</span>
+                            </div>
+                        </div>
+                        <a href="#" class="sol-eco-link">Voir toutes les intégrations →</a>
+                    </div>
+
+                </div>
+
+                <!-- Trust bar -->
+                <div class="sol-eco-trust reveal stagger-3">
+                    <iconify-icon icon="solar:shield-check-bold-duotone" class="sol-trust-icon"></iconify-icon>
+                    <span>Toutes les intégrations respectent les normes <strong>SOC 2 Type II</strong>, <strong>ISO
+                            27001</strong> et <strong>RGPD</strong></span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             5. TESTIMONIAL STRIP — Touch personnel
+             ==================================================== -->
+        <section class="sol-proof">
+            <div class="container">
+                <div class="sol-proof-inner reveal stagger-1">
+                    <div class="sol-proof-quote">
+                        <iconify-icon icon="solar:quote-up-bold-duotone" class="sol-quote-icon"></iconify-icon>
+                        <p>"Atlasis a réduit notre temps de déploiement de 8 heures à 4 minutes. C'est la transformation
+                            la plus impactante que nous ayons vécue."</p>
+                        <div class="sol-proof-author">
+                            <img src="https://i.pravatar.cc/48?u=cto-nova" alt="CTO NovaCore">
+                            <div>
+                                <strong>Thomas Marceau</strong>
+                                <span>CTO, NovaCore Systems</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="sol-proof-stats">
+                        <div class="sol-proof-stat">
+                            <span class="sol-proof-val">−87%</span>
+                            <span class="sol-proof-key">Temps de déploiement</span>
+                        </div>
+                        <div class="sol-proof-stat">
+                            <span class="sol-proof-val">×3.2</span>
+                            <span class="sol-proof-key">Vélocité équipe</span>
+                        </div>
+                        <div class="sol-proof-stat">
+                            <span class="sol-proof-val">−62%</span>
+                            <span class="sol-proof-key">Coûts infra</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====================================================
+             6. CTA FINAL
+             ==================================================== -->
+        <section class="sol-cta">
+            <canvas class="sol-cta-canvas" aria-hidden="true"></canvas>
+            <div class="sol-cta-glow"></div>
+
+            <div class="container sol-cta-inner">
+
+                <div class="sol-cta-content reveal stagger-1">
+                    <div class="sol-cta-badge">
+                        <span class="sol-cta-dot"></span>
+                        <span>Démarrez maintenant</span>
+                    </div>
+                    <h2 class="sol-cta-title">
+                        Prêt à transformer<br>votre <em class="sol-cta-em">infrastructure</em>&nbsp;?
+                    </h2>
+                    <p class="sol-cta-desc">Rejoignez 500+ équipes qui font déjà confiance à Atlasis. Déploiement en 60
+                        secondes, sans carte bancaire.</p>
+                    <div class="sol-cta-actions">
+                        <a href="#" class="btn btn-primary btn-flip" data-front="→ Démarrer gratuitement"
+                            data-back="C'est parti !"></a>
+                        <a href="index.html#pricing" class="btn btn-secondary btn-flip" data-front="Voir les tarifs"
+                            data-back="Nos offres"></a>
+                    </div>
+                    <div class="sol-cta-proof">
+                        <div class="proof-avatars">
+                            <img src="https://i.pravatar.cc/40?u=sp1" alt="">
+                            <img src="https://i.pravatar.cc/40?u=sp2" alt="">
+                            <img src="https://i.pravatar.cc/40?u=sp3" alt="">
+                            <img src="https://i.pravatar.cc/40?u=sp4" alt="">
+                        </div>
+                        <span class="sol-proof-text"><strong>+500 équipes</strong> nous font déjà confiance</span>
+                    </div>
+                </div>
+
+                <!-- Déco droite : orbites SVG animées -->
+                <div class="sol-cta-deco reveal stagger-2" aria-hidden="true">
+                    <div class="sol-orbit-wrap">
+                        <div class="sol-orbit sol-orbit--1">
+                            <div class="sol-orbit-dot"></div>
+                        </div>
+                        <div class="sol-orbit sol-orbit--2">
+                            <div class="sol-orbit-dot"></div>
+                        </div>
+                        <div class="sol-orbit sol-orbit--3">
+                            <div class="sol-orbit-dot"></div>
+                        </div>
+                        <div class="sol-orbit-center">
+                            <iconify-icon icon="solar:layers-bold-duotone"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">Solutions technologiques innovantes pour les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produits</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="index.html#pricing">Tarifs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">© 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#" aria-label="LinkedIn"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#" aria-label="Github"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="solutions.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis — Intégrations</title>
+    <meta name="description"
+        content="Connectez vos outils préférés à Atlasis. 200+ intégrations disponibles pour automatiser votre infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="integrations.css">
+</head>
+
+<body>
+
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">Atlasis<span class="dot">.</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                                        <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO
+        ════════════════════════════════════════ -->
+        <section class="ig-hero">
+            <canvas class="ig-canvas" id="ig-canvas" aria-hidden="true"></canvas>
+            <div class="ig-hero-grid" aria-hidden="true"></div>
+            <div class="ig-orb ig-orb--1" aria-hidden="true"></div>
+            <div class="ig-orb ig-orb--2" aria-hidden="true"></div>
+
+            <!-- Icônes flottantes -->
+            <div class="ig-float-icons" aria-hidden="true">
+                <div class="ig-float-icon ig-fi--1"><iconify-icon icon="logos:slack-icon"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--2"><iconify-icon icon="logos:github-icon"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--3"><iconify-icon icon="logos:aws"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--4"><iconify-icon icon="logos:figma"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--5"><iconify-icon icon="logos:notion-icon"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--6"><iconify-icon icon="logos:docker-icon"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--7"><iconify-icon icon="logos:google-cloud"></iconify-icon></div>
+                <div class="ig-float-icon ig-fi--8"><iconify-icon icon="logos:stripe"></iconify-icon></div>
+            </div>
+
+            <div class="container ig-hero-content">
+                <div class="ig-badge reveal stagger-1">
+                    <span class="ig-badge-dot"></span>
+                    Écosystème Atlasis
+                    <span class="ig-badge-count">200+ intégrations</span>
+                </div>
+
+                <h1 class="ig-hero-title reveal stagger-2">
+                    Connectez vos outils,<br>
+                    <span class="ig-title-gradient">décuplez votre puissance</span>
+                </h1>
+
+                <p class="ig-hero-desc reveal stagger-3">
+                    Intégrez les outils que vous utilisez déjà. Automatisez vos flux en quelques clics,<br>
+                    sans une ligne de code grâce à l'infrastructure IA Atlasis.
+                </p>
+
+                <!-- Searchbar hero -->
+                <div class="ig-search-wrap reveal stagger-4">
+                    <iconify-icon icon="solar:magnifer-linear" class="ig-search-icon"></iconify-icon>
+                    <input type="search" id="ig-search" class="ig-search-input"
+                        placeholder="Rechercher une intégration (ex: Slack, GitHub…)" autocomplete="off">
+                    <kbd class="ig-search-kbd">⌘K</kbd>
+                </div>
+
+                <!-- Mini stats -->
+                <div class="ig-hero-stats reveal stagger-4">
+                    <div class="ig-stat">
+                        <span class="ig-stat-num">200+</span>
+                        <span class="ig-stat-label">Intégrations</span>
+                    </div>
+                    <div class="ig-stat-sep"></div>
+                    <div class="ig-stat">
+                        <span class="ig-stat-num">1 min</span>
+                        <span class="ig-stat-label">Pour connecter</span>
+                    </div>
+                    <div class="ig-stat-sep"></div>
+                    <div class="ig-stat">
+                        <span class="ig-stat-num">99.9%</span>
+                        <span class="ig-stat-label">Uptime API</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             FILTRES + GRILLE
+        ════════════════════════════════════════ -->
+        <section class="ig-grid-section" id="integrations">
+            <div class="container">
+
+                <!-- Filtres catégories -->
+                <div class="ig-filters reveal stagger-1">
+                    <button class="ig-filter ig-filter--active" data-filter="all">
+                        <iconify-icon icon="solar:widget-bold-duotone"></iconify-icon>
+                        Tous
+                    </button>
+                    <button class="ig-filter" data-filter="communication">
+                        <iconify-icon icon="solar:chat-dots-bold-duotone"></iconify-icon>
+                        Communication
+                    </button>
+                    <button class="ig-filter" data-filter="cloud">
+                        <iconify-icon icon="solar:cloud-bold-duotone"></iconify-icon>
+                        Cloud & Dev
+                    </button>
+                    <button class="ig-filter" data-filter="analytics">
+                        <iconify-icon icon="solar:chart-bold-duotone"></iconify-icon>
+                        Analytics
+                    </button>
+                    <button class="ig-filter" data-filter="design">
+                        <iconify-icon icon="solar:pen-bold-duotone"></iconify-icon>
+                        Design
+                    </button>
+                    <button class="ig-filter" data-filter="productivity">
+                        <iconify-icon icon="solar:checklist-bold-duotone"></iconify-icon>
+                        Productivité
+                    </button>
+                    <button class="ig-filter" data-filter="security">
+                        <iconify-icon icon="solar:shield-bold-duotone"></iconify-icon>
+                        Sécurité
+                    </button>
+                </div>
+
+                <!-- Compteur résultats -->
+                <div class="ig-results-bar reveal stagger-2">
+                    <span id="ig-count" class="ig-results-count">12 intégrations</span>
+                    <span class="ig-results-sep">·</span>
+                    <span class="ig-results-hint" id="ig-active-filter">Toutes les catégories</span>
+                </div>
+
+                <!-- Grille des cards -->
+                <div class="ig-grid" id="ig-grid">
+                    <!-- Injectées via JS -->
+                </div>
+
+                <!-- Empty state -->
+                <div class="ig-empty" id="ig-empty" style="display:none;">
+                    <iconify-icon icon="solar:magnifer-bold-duotone"></iconify-icon>
+                    <h3>Aucun résultat</h3>
+                    <p>Essayez un autre mot-clé ou explorez une catégorie différente.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             CTA — API CUSTOM
+        ════════════════════════════════════════ -->
+        <section class="ig-cta">
+            <canvas class="ig-cta-canvas" id="ig-cta-canvas" aria-hidden="true"></canvas>
+            <div class="ig-cta-glow" aria-hidden="true"></div>
+
+            <div class="container ig-cta-inner reveal stagger-1">
+                <div class="ig-cta-content">
+                    <div class="ig-badge">
+                        <span class="ig-badge-dot"></span>
+                        API Publique
+                    </div>
+                    <h2 class="ig-cta-title">
+                        Vous ne trouvez pas<br>votre <em class="ig-cta-em">outil</em>&nbsp;?
+                    </h2>
+                    <p class="ig-cta-desc">
+                        Construisez des intégrations sur-mesure avec notre API REST complète, des webhooks et notre SDK
+                        open-source. La documentation est là pour vous guider.
+                    </p>
+                    <div class="ig-cta-actions">
+                        <a href="#" class="btn btn-primary btn-flip" data-front="→ Lire la documentation"
+                            data-back="Développer →"></a>
+                        <a href="contact.html" class="btn btn-secondary btn-flip" data-front="Nous contacter"
+                            data-back="On répond !"></a>
+                    </div>
+                </div>
+
+                <!-- Code snippet décoratif -->
+                <div class="ig-cta-code" aria-hidden="true">
+                    <div class="ig-code-window">
+                        <div class="ig-code-header">
+                            <span class="ig-dot ig-dot--red"></span>
+                            <span class="ig-dot ig-dot--yellow"></span>
+                            <span class="ig-dot ig-dot--green"></span>
+                            <span class="ig-code-title">atlasis.config.ts</span>
+                        </div>
+                        <pre class="ig-code-body"><code><span class="ig-c-key">import</span> <span class="ig-c-name">{ Atlasis }</span> <span class="ig-c-key">from</span> <span class="ig-c-str">'@atlasis/sdk'</span>
+
+<span class="ig-c-key">const</span> <span class="ig-c-name">client</span> = <span class="ig-c-key">new</span> <span class="ig-c-name">Atlasis</span>({
+  apiKey: <span class="ig-c-str">process.env.ATLASIS_KEY</span>,
+  region: <span class="ig-c-str">'eu-west-1'</span>,
+})
+
+<span class="ig-c-comment">// Connecter un outil personnalisé</span>
+<span class="ig-c-key">await</span> client.integrations.<span class="ig-c-fn">connect</span>({
+  name: <span class="ig-c-str">'Mon Outil'</span>,
+  webhook: <span class="ig-c-str">'https://hooks.exemple.com'</span>,
+  events: [<span class="ig-c-str">'data.push'</span>, <span class="ig-c-str">'sync.done'</span>],
+})</code></pre>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">Solutions technologiques innovantes pour les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                            <li><a href="integrations.html">Intégrations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">© 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Confidentialité</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="integrations.js"></script>
+</body>
+
+</html>

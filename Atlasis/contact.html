@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis — Nous Contacter</title>
+    <meta name="description" content="Prenez contact avec l'équipe Atlasis. Nous répondons en moins de 4 heures.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+
+<body class="ct-body">
+
+    <!-- =========================================================
+         CURSOR PERSONNALISÉ
+         ========================================================= -->
+    <div class="ct-cursor" id="ct-cursor" aria-hidden="true"></div>
+    <div class="ct-cursor-trail" id="ct-cursor-trail" aria-hidden="true"></div>
+
+    <!-- =========================================================
+         HEADER
+         ========================================================= -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                                        <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav active-nav-btn">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- =========================================================
+             SECTION 1 — HERO CONTACT
+             ========================================================= -->
+        <section class="ct-hero">
+            <canvas class="ct-canvas" id="ct-canvas" aria-hidden="true"></canvas>
+
+            <!-- Grid lines déco -->
+            <div class="ct-hero-grid" aria-hidden="true"></div>
+
+            <!-- Orbes ambiants -->
+            <div class="ct-orb ct-orb--1" aria-hidden="true"></div>
+            <div class="ct-orb ct-orb--2" aria-hidden="true"></div>
+            <div class="ct-orb ct-orb--3" aria-hidden="true"></div>
+
+            <!-- Lignes diagonales décoratives -->
+            <div class="ct-diagonal-lines" aria-hidden="true">
+                <span></span><span></span><span></span>
+            </div>
+
+            <div class="container ct-hero-content">
+
+                <!-- Badge -->
+                <div class="ct-badge reveal stagger-1">
+                    <span class="ct-badge-dot"></span>
+                    <span>Nous contacter</span>
+                    <span class="ct-badge-sep">·</span>
+                    <span class="ct-badge-status">
+                        <span class="ct-status-dot"></span>
+                        Disponible maintenant
+                    </span>
+                </div>
+
+                <!-- Headline -->
+                <h1 class="ct-hero-title reveal stagger-2">
+                    Parlons de votre
+                    <span class="ct-title-line">
+                        <span class="ct-title-word ct-word--outline">prochaine</span>
+                        <span class="ct-title-word ct-word--fill">infrastructure</span>
+                    </span>
+                </h1>
+
+                <!-- Sub -->
+                <p class="ct-hero-desc reveal stagger-3">
+                    Notre équipe d'experts répond en moins de 4 heures.<br>
+                    Pas de formulaire perdu. Pas de robot. Une vraie conversation.
+                </p>
+
+                <!-- Scroll indicator -->
+                <div class="ct-scroll-hint reveal stagger-4" aria-hidden="true">
+                    <div class="ct-scroll-line"></div>
+                    <span>Continuer</span>
+                </div>
+
+            </div>
+
+            <!-- Métriques flottantes -->
+            <div class="ct-floating-stats" aria-hidden="true">
+                <div class="ct-fstat ct-fstat--tl reveal stagger-2">
+                    <span class="ct-fstat-num">4h</span>
+                    <span class="ct-fstat-label">Réponse garantie</span>
+                </div>
+                <div class="ct-fstat ct-fstat--tr reveal stagger-3">
+                    <span class="ct-fstat-num">500+</span>
+                    <span class="ct-fstat-label">Clients satisfaits</span>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- =========================================================
+             SECTION 2 — CHOIX DE CANAL DE CONTACT
+             ========================================================= -->
+        <section class="ct-channels">
+            <div class="container">
+
+                <div class="ct-channels-header reveal stagger-1">
+                    <span class="ct-label">Comment souhaitez-vous nous joindre ?</span>
+                </div>
+
+                <div class="ct-channels-grid">
+
+                    <!-- Email -->
+                    <div class="ct-channel-card reveal stagger-1" data-channel="email">
+                        <div class="ct-channel-glow"></div>
+                        <div class="ct-channel-icon">
+                            <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                        </div>
+                        <div class="ct-channel-body">
+                            <h3>Par e-mail</h3>
+                            <p>Pour toute demande détaillée, devis ou partenariat.</p>
+                            <a href="mailto:hello@atlasis.io" class="ct-channel-link">
+                                hello@atlasis.io
+                                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                            </a>
+                        </div>
+                        <span class="ct-channel-delay">~4h</span>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="ct-channel-card reveal stagger-2" data-channel="phone">
+                        <div class="ct-channel-glow"></div>
+                        <div class="ct-channel-icon">
+                            <iconify-icon icon="solar:phone-calling-bold-duotone"></iconify-icon>
+                        </div>
+                        <div class="ct-channel-body">
+                            <h3>Par téléphone</h3>
+                            <p>Lun–Ven, 9h–18h CET. Pour les urgences enterprise.</p>
+                            <a href="tel:+33144880000" class="ct-channel-link">
+                                +33 1 44 88 00 00
+                                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                            </a>
+                        </div>
+                        <span class="ct-channel-delay">Immédiat</span>
+                    </div>
+
+                    <!-- Chat live -->
+                    <div class="ct-channel-card reveal stagger-3" data-channel="chat">
+                        <div class="ct-channel-glow"></div>
+                        <div class="ct-channel-icon">
+                            <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                        </div>
+                        <div class="ct-channel-body">
+                            <h3>Chat en direct</h3>
+                            <p>Posez votre question directement à notre équipe Support.</p>
+                            <button class="ct-channel-link ct-channel-link--btn" id="ct-open-chat">
+                                Démarrer le chat
+                                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                            </button>
+                        </div>
+                        <span class="ct-channel-delay">~5 min</span>
+                    </div>
+
+                    <!-- Calendly -->
+                    <div class="ct-channel-card reveal stagger-4" data-channel="meeting">
+                        <div class="ct-channel-glow"></div>
+                        <div class="ct-channel-icon">
+                            <iconify-icon icon="solar:calendar-mark-bold-duotone"></iconify-icon>
+                        </div>
+                        <div class="ct-channel-body">
+                            <h3>Réserver une démo</h3>
+                            <p>30 min avec un expert Atlasis. Gratuit et sans engagement.</p>
+                            <a href="#" class="ct-channel-link">
+                                Choisir un créneau
+                                <iconify-icon icon="solar:arrow-right-up-linear"></iconify-icon>
+                            </a>
+                        </div>
+                        <span class="ct-channel-delay">Votre agenda</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 3 — FORMULAIRE + INFOS
+             ========================================================= -->
+        <section class="ct-main" id="ct-form-section">
+            <div class="container ct-main-inner">
+
+                <!-- ── Colonne gauche : Infos & Confiance ── -->
+                <aside class="ct-aside reveal stagger-1">
+
+                    <!-- Bloc info entreprise -->
+                    <div class="ct-aside-block">
+                        <h2 class="ct-aside-title">Atlasis, c'est votre partenaire infrastructure.</h2>
+                        <p class="ct-aside-sub">
+                            Depuis Paris, nous accompagnons plus de 500 équipes tech dans leur transformation cloud,
+                            sécurité et automatisation.
+                        </p>
+                    </div>
+
+                    <!-- Coordonnées -->
+                    <div class="ct-aside-block">
+                        <div class="ct-info-list">
+                            <div class="ct-info-item">
+                                <div class="ct-info-icon">
+                                    <iconify-icon icon="solar:map-point-bold-duotone"></iconify-icon>
+                                </div>
+                                <div>
+                                    <span class="ct-info-label">Siège social</span>
+                                    <span class="ct-info-value">42 Rue de la Paix, 75002 Paris, France</span>
+                                </div>
+                            </div>
+                            <div class="ct-info-item">
+                                <div class="ct-info-icon">
+                                    <iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                                </div>
+                                <div>
+                                    <span class="ct-info-label">Horaires</span>
+                                    <span class="ct-info-value">Lun–Ven · 9h00–18h00 CET</span>
+                                </div>
+                            </div>
+                            <div class="ct-info-item">
+                                <div class="ct-info-icon">
+                                    <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                                </div>
+                                <div>
+                                    <span class="ct-info-label">Email général</span>
+                                    <span class="ct-info-value">hello@atlasis.io</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Réseaux sociaux -->
+                    <div class="ct-aside-block">
+                        <p class="ct-aside-social-label">Suivez-nous</p>
+                        <div class="ct-socials">
+                            <a href="#" class="ct-social" aria-label="Twitter">
+                                <iconify-icon icon="ri:twitter-x-fill"></iconify-icon>
+                            </a>
+                            <a href="#" class="ct-social" aria-label="LinkedIn">
+                                <iconify-icon icon="ri:linkedin-box-fill"></iconify-icon>
+                            </a>
+                            <a href="#" class="ct-social" aria-label="GitHub">
+                                <iconify-icon icon="ri:github-fill"></iconify-icon>
+                            </a>
+                            <a href="#" class="ct-social" aria-label="YouTube">
+                                <iconify-icon icon="ri:youtube-fill"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Trust badges -->
+                    <div class="ct-trust-badges">
+                        <div class="ct-trust-badge">
+                            <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                            <span>SOC 2 Type II</span>
+                        </div>
+                        <div class="ct-trust-badge">
+                            <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                            <span>ISO 27001</span>
+                        </div>
+                        <div class="ct-trust-badge">
+                            <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                            <span>RGPD</span>
+                        </div>
+                    </div>
+
+                </aside>
+
+                <!-- ── Colonne droite : Formulaire ── -->
+                <div class="ct-form-wrap reveal stagger-2">
+
+                    <!-- Sélecteur de sujet -->
+                    <div class="ct-subject-pills">
+                        <span class="ct-subject-label">Votre demande concerne :</span>
+                        <div class="ct-pills">
+                            <button class="ct-pill ct-pill--active" data-subject="demo">Démo produit</button>
+                            <button class="ct-pill" data-subject="pricing">Tarification</button>
+                            <button class="ct-pill" data-subject="support">Support technique</button>
+                            <button class="ct-pill" data-subject="partnership">Partenariat</button>
+                            <button class="ct-pill" data-subject="other">Autre</button>
+                        </div>
+                    </div>
+
+                    <!-- Formulaire principal -->
+                    <form class="ct-form" id="ct-form" novalidate>
+                        <input type="hidden" name="subject" id="ct-subject-val" value="demo">
+
+                        <!-- Ligne 1 : Prénom + Nom -->
+                        <div class="ct-form-row">
+                            <div class="ct-field">
+                                <label class="ct-label" for="ct-firstname">Prénom</label>
+                                <div class="ct-input-wrap">
+                                    <input type="text" id="ct-firstname" name="firstname" class="ct-input"
+                                        placeholder="Jean" autocomplete="given-name" required>
+                                    <span class="ct-input-border"></span>
+                                </div>
+                                <span class="ct-error" role="alert"></span>
+                            </div>
+                            <div class="ct-field">
+                                <label class="ct-label" for="ct-lastname">Nom</label>
+                                <div class="ct-input-wrap">
+                                    <input type="text" id="ct-lastname" name="lastname" class="ct-input"
+                                        placeholder="Dupont" autocomplete="family-name" required>
+                                    <span class="ct-input-border"></span>
+                                </div>
+                                <span class="ct-error" role="alert"></span>
+                            </div>
+                        </div>
+
+                        <!-- Ligne 2 : Email + Entreprise -->
+                        <div class="ct-form-row">
+                            <div class="ct-field">
+                                <label class="ct-label" for="ct-email">Email professionnel</label>
+                                <div class="ct-input-wrap">
+                                    <input type="email" id="ct-email" name="email" class="ct-input"
+                                        placeholder="jean@entreprise.com" autocomplete="email" required>
+                                    <span class="ct-input-border"></span>
+                                </div>
+                                <span class="ct-error" role="alert"></span>
+                            </div>
+                            <div class="ct-field">
+                                <label class="ct-label" for="ct-company">Entreprise</label>
+                                <div class="ct-input-wrap">
+                                    <input type="text" id="ct-company" name="company" class="ct-input"
+                                        placeholder="Acme Corp" autocomplete="organization">
+                                    <span class="ct-input-border"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ligne 3 : Taille équipe -->
+                        <div class="ct-field">
+                            <label class="ct-label" for="ct-teamsize">Taille de l'équipe</label>
+                            <div class="ct-input-wrap ct-select-wrap">
+                                <select id="ct-teamsize" name="teamsize" class="ct-input ct-select">
+                                    <option value="" disabled selected>Sélectionner…</option>
+                                    <option value="solo">Juste moi (freelance)</option>
+                                    <option value="small">2–10 personnes</option>
+                                    <option value="mid">11–50 personnes</option>
+                                    <option value="large">51–200 personnes</option>
+                                    <option value="enterprise">200+ personnes</option>
+                                </select>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="ct-select-arrow"></iconify-icon>
+                                <span class="ct-input-border"></span>
+                            </div>
+                        </div>
+
+                        <!-- Message -->
+                        <div class="ct-field">
+                            <label class="ct-label" for="ct-message">
+                                Votre message
+                                <span class="ct-char-count" id="ct-char-count">0 / 600</span>
+                            </label>
+                            <div class="ct-input-wrap">
+                                <textarea id="ct-message" name="message" class="ct-input ct-textarea"
+                                    placeholder="Décrivez votre projet, vos enjeux ou posez-nous une question directement…"
+                                    maxlength="600" required rows="5"></textarea>
+                                <span class="ct-input-border"></span>
+                            </div>
+                            <span class="ct-error" role="alert"></span>
+                        </div>
+
+                        <!-- Consentement -->
+                        <div class="ct-consent">
+                            <label class="ct-checkbox-label">
+                                <input type="checkbox" id="ct-gdpr" name="gdpr" required class="ct-checkbox-input">
+                                <span class="ct-checkbox-custom">
+                                    <iconify-icon icon="solar:check-bold"></iconify-icon>
+                                </span>
+                                <span class="ct-consent-text">
+                                    J'accepte que mes données soient traitées conformément à la
+                                    <a href="#" class="ct-consent-link">Politique de confidentialité</a> d'Atlasis
+                                    (RGPD).
+                                </span>
+                            </label>
+                            <span class="ct-error" role="alert" id="ct-gdpr-error"></span>
+                        </div>
+
+                        <!-- Bouton submit -->
+                        <button type="submit" class="ct-submit" id="ct-submit">
+                            <span class="ct-submit-text">Envoyer le message</span>
+                            <span class="ct-submit-icon">
+                                <iconify-icon icon="solar:arrow-right-bold"></iconify-icon>
+                            </span>
+                            <span class="ct-submit-loader" aria-hidden="true">
+                                <span></span><span></span><span></span>
+                            </span>
+                        </button>
+
+                        <!-- Message de succès -->
+                        <div class="ct-success" id="ct-success" aria-live="polite">
+                            <div class="ct-success-icon">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                            </div>
+                            <div class="ct-success-content">
+                                <h4>Message envoyé avec succès !</h4>
+                                <p>Notre équipe vous répondra dans les 4 heures. Gardez un œil sur <span
+                                        id="ct-confirm-email"></span>.</p>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 4 — CARTE / BUREAU
+             ========================================================= -->
+        <section class="ct-office">
+            <div class="container">
+
+                <div class="ct-office-header reveal stagger-1">
+                    <span class="ct-label">Notre bureau</span>
+                    <h2 class="ct-office-title">Venez nous rencontrer à Paris</h2>
+                </div>
+
+                <div class="ct-office-grid reveal stagger-2">
+
+                    <!-- Map placeholder (stylisé) -->
+                    <div class="ct-map-placeholder">
+                        <div class="ct-map-inner">
+                            <div class="ct-map-grid"></div>
+                            <div class="ct-map-pin">
+                                <div class="ct-map-pin-ring"></div>
+                                <div class="ct-map-pin-ring ct-map-pin-ring--2"></div>
+                                <iconify-icon icon="solar:map-point-bold-duotone"
+                                    class="ct-map-pin-icon"></iconify-icon>
+                            </div>
+                            <div class="ct-map-label">
+                                <span>42 Rue de la Paix</span>
+                                <span>75002 Paris</span>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com" target="_blank" rel="noopener" class="ct-map-open">
+                            <iconify-icon icon="solar:map-bold-duotone"></iconify-icon>
+                            Ouvrir dans Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Infos bureau -->
+                    <div class="ct-office-infos">
+                        <div class="ct-office-card">
+                            <div class="ct-office-card-icon">
+                                <iconify-icon icon="solar:buildings-2-bold-duotone"></iconify-icon>
+                            </div>
+                            <h4>Siège Principal</h4>
+                            <p>42 Rue de la Paix<br>75002 Paris, France</p>
+                        </div>
+                        <div class="ct-office-card">
+                            <div class="ct-office-card-icon">
+                                <iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                            </div>
+                            <h4>Horaires d'accueil</h4>
+                            <p>Lundi – Vendredi<br>9h00 → 18h00 CET</p>
+                        </div>
+                        <div class="ct-office-card">
+                            <div class="ct-office-card-icon">
+                                <iconify-icon icon="solar:tram-bold-duotone"></iconify-icon>
+                            </div>
+                            <h4>Accès transport</h4>
+                            <p>Métro Opéra (L3, L7, L8)<br>RER A — Auber</p>
+                        </div>
+                        <div class="ct-office-card">
+                            <div class="ct-office-card-icon">
+                                <iconify-icon icon="solar:global-bold-duotone"></iconify-icon>
+                            </div>
+                            <h4>Présence internationale</h4>
+                            <p>Paris · Londres · Berlin<br>New York · Singapour</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+        <!-- =========================================================
+             SECTION 5 — TÉMOIGNAGE / SOCIAL PROOF
+             ========================================================= -->
+        <section class="ct-proof">
+            <div class="container">
+                <div class="ct-proof-inner reveal stagger-1">
+
+                    <div class="ct-proof-quotes">
+                        <iconify-icon icon="solar:quote-up-circle-bold-duotone"
+                            class="ct-proof-quote-icon"></iconify-icon>
+                        <p class="ct-proof-text">
+                            "Atlasis a répondu en moins d'une heure à ma demande initiale. Deux jours plus tard, toute
+                            notre infrastructure était migrée sans interruption de service."
+                        </p>
+                        <div class="ct-proof-author">
+                            <img src="https://i.pravatar.cc/80?u=sophie" alt="Sophie Martin" class="ct-proof-avatar"
+                                width="44" height="44">
+                            <div>
+                                <strong>Sophie Martin</strong>
+                                <span>CTO · Nexarion SAS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ct-proof-stats">
+                        <div class="ct-proof-stat">
+                            <span class="ct-proof-num" data-target="98">0</span><span class="ct-proof-unit">%</span>
+                            <span class="ct-proof-desc">Taux de satisfaction</span>
+                        </div>
+                        <div class="ct-proof-stat">
+                            <span class="ct-proof-num" data-target="4">0</span><span class="ct-proof-unit">h</span>
+                            <span class="ct-proof-desc">Réponse garantie</span>
+                        </div>
+                        <div class="ct-proof-stat">
+                            <span class="ct-proof-num" data-target="500">0</span><span class="ct-proof-unit">+</span>
+                            <span class="ct-proof-desc">Clients actifs</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">Solutions technologiques innovantes pour les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">© 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="contact.js"></script>
+
+</body>
+
+</html>
