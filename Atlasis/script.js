@@ -236,11 +236,36 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Team Selector
     initTeam();
+
+    // Scroll-Linked Marquee for Team Section
+    initScrollMarquee();
 });
 
 // ============================================================
 //  3. FONCTIONS MODULAIRES
 // ============================================================
+
+function initScrollMarquee() {
+    const section = document.querySelector('.team-section');
+    const row1 = document.querySelector('.row-1 .marquee-content-team');
+    const row2 = document.querySelector('.row-2 .marquee-content-team');
+
+    if (!section || !row1 || !row2) return;
+
+    window.addEventListener('scroll', () => {
+        const rect = section.getBoundingClientRect();
+        const winHeight = window.innerHeight;
+
+        // On ne calcule que si la section est visible
+        if (rect.top < winHeight && rect.bottom > 0) {
+            const scrollPercent = (winHeight - rect.top) / (winHeight + rect.height);
+            const movement = scrollPercent * 200; // Ajustez la valeur pour l'amplitude
+
+            row1.style.transform = `translateX(-${movement}px)`;
+            row2.style.transform = `translateX(${movement}px)`;
+        }
+    }, { passive: true });
+}
 
 function initPricing() {
     const pricingToggle = document.getElementById('pricing-toggle');

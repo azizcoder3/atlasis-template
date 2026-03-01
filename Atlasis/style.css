@@ -1204,6 +1204,7 @@ body {
     gap: 24px;
     padding: 0 12px;
     will-change: transform;
+    transition: transform 0.1s linear;
 }
 
 .team-card {

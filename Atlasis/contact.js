@@ -5,58 +5,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ----------------------------------------------------------
-    // 1. CURSOR PERSONNALISÉ
-    // ----------------------------------------------------------
-    const cursor      = document.getElementById('ct-cursor');
-    const cursorTrail = document.getElementById('ct-cursor-trail');
 
-    if (cursor && cursorTrail) {
-        let trailX = 0, trailY = 0;
-        let curX   = 0, curY   = 0;
-        let rafId;
 
-        // Mise à jour immédiate du cursor principal
-        document.addEventListener('mousemove', (e) => {
-            curX = e.clientX;
-            curY = e.clientY;
-            cursor.style.left = `${curX}px`;
-            cursor.style.top  = `${curY}px`;
-        });
-
-        // Lerp pour le trail
-        const animateTrail = () => {
-            trailX += (curX - trailX) * 0.12;
-            trailY += (curY - trailY) * 0.12;
-            cursorTrail.style.left = `${trailX}px`;
-            cursorTrail.style.top  = `${trailY}px`;
-            rafId = requestAnimationFrame(animateTrail);
-        };
-        animateTrail();
-
-        // Hover state sur éléments interactifs
-        const hoverTargets = document.querySelectorAll('a, button, .ct-pill, .ct-channel-card, .ct-social, .ct-office-card');
-        hoverTargets.forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.classList.add('ct-cursor--hover');
-                cursorTrail.classList.add('ct-cursor-trail--hover');
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.classList.remove('ct-cursor--hover');
-                cursorTrail.classList.remove('ct-cursor-trail--hover');
-            });
-        });
-
-        // Masquer le cursor hors de la fenêtre
-        document.addEventListener('mouseleave', () => {
-            cursor.style.opacity      = '0';
-            cursorTrail.style.opacity = '0';
-        });
-        document.addEventListener('mouseenter', () => {
-            cursor.style.opacity      = '1';
-            cursorTrail.style.opacity = '1';
-        });
-    }
 
     // ----------------------------------------------------------
     // 2. CANVAS — Particules flottantes (hero)
@@ -70,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const hero = canvas.closest('.ct-hero');
 
         const resizeCanvas = () => {
-            canvas.width  = window.innerWidth;
+            canvas.width = window.innerWidth;
             canvas.height = hero.offsetHeight;
         };
 
@@ -90,28 +40,28 @@ document.addEventListener('DOMContentLoaded', () => {
             constructor(init = false) { this.reset(init); }
 
             reset(init = false) {
-                this.x       = Math.random() * canvas.width;
-                this.y       = init ? Math.random() * canvas.height : canvas.height + 10;
-                this.r       = Math.random() * 1.6 + 0.3;
+                this.x = Math.random() * canvas.width;
+                this.y = init ? Math.random() * canvas.height : canvas.height + 10;
+                this.r = Math.random() * 1.6 + 0.3;
                 this.baseAlpha = Math.random() * 0.4 + 0.06;
-                this.alpha   = this.baseAlpha;
-                this.speedY  = Math.random() * 0.35 + 0.08;
-                this.speedX  = (Math.random() - 0.5) * 0.2;
+                this.alpha = this.baseAlpha;
+                this.speedY = Math.random() * 0.35 + 0.08;
+                this.speedX = (Math.random() - 0.5) * 0.2;
                 this.twinkle = Math.random() * Math.PI * 2;
                 this.twinkleSpeed = Math.random() * 0.02 + 0.008;
                 // Teinte : blanc ou bleu
-                this.isBlue  = Math.random() < 0.15;
+                this.isBlue = Math.random() < 0.15;
             }
 
             update() {
-                this.y       -= this.speedY;
-                this.x       += this.speedX;
+                this.y -= this.speedY;
+                this.x += this.speedX;
                 this.twinkle += this.twinkleSpeed;
-                this.alpha    = this.baseAlpha * (0.65 + 0.35 * Math.sin(this.twinkle));
+                this.alpha = this.baseAlpha * (0.65 + 0.35 * Math.sin(this.twinkle));
 
                 // Répulsion légère du curseur
-                const dx  = this.x - mouseX;
-                const dy  = this.y - mouseY;
+                const dx = this.x - mouseX;
+                const dy = this.y - mouseY;
                 const dist = Math.sqrt(dx * dx + dy * dy);
                 if (dist < 80) {
                     const force = (80 - dist) / 80;
@@ -140,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const maxDist = 100;
             for (let i = 0; i < particles.length; i++) {
                 for (let j = i + 1; j < particles.length; j++) {
-                    const dx  = particles[i].x - particles[j].x;
-                    const dy  = particles[i].y - particles[j].y;
+                    const dx = particles[i].x - particles[j].x;
+                    const dy = particles[i].y - particles[j].y;
                     const dist = Math.sqrt(dx * dx + dy * dy);
                     if (dist < maxDist) {
                         const alpha = (1 - dist / maxDist) * 0.08;
@@ -149,7 +99,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         ctx.moveTo(particles[i].x, particles[i].y);
                         ctx.lineTo(particles[j].x, particles[j].y);
                         ctx.strokeStyle = `rgba(0,102,255,${alpha})`;
-                        ctx.lineWidth   = 0.5;
+                        ctx.lineWidth = 0.5;
                         ctx.stroke();
                     }
                 }
@@ -188,8 +138,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------
     // 4. SUBJECT PILLS
     // ----------------------------------------------------------
-    const pills       = document.querySelectorAll('.ct-pill');
-    const subjectVal  = document.getElementById('ct-subject-val');
+    const pills = document.querySelectorAll('.ct-pill');
+    const subjectVal = document.getElementById('ct-subject-val');
 
     pills.forEach(pill => {
         pill.addEventListener('click', () => {
@@ -202,7 +152,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------
     // 5. CHARACTER COUNT — textarea
     // ----------------------------------------------------------
-    const textarea  = document.getElementById('ct-message');
+    const textarea = document.getElementById('ct-message');
     const charCount = document.getElementById('ct-char-count');
 
     if (textarea && charCount) {
@@ -211,7 +161,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const max = textarea.maxLength || 600;
             charCount.textContent = `${len} / ${max}`;
             charCount.classList.toggle('ct-char-count--warn', len >= max * 0.8 && len < max);
-            charCount.classList.toggle('ct-char-count--max',  len >= max);
+            charCount.classList.toggle('ct-char-count--max', len >= max);
         };
 
         textarea.addEventListener('input', updateCount);
@@ -220,16 +170,16 @@ document.addEventListener('DOMContentLoaded', () => {
     // ----------------------------------------------------------
     // 6. VALIDATION FORMULAIRE + SUBMIT
     // ----------------------------------------------------------
-    const form      = document.getElementById('ct-form');
+    const form = document.getElementById('ct-form');
     const submitBtn = document.getElementById('ct-submit');
-    const success   = document.getElementById('ct-success');
+    const success = document.getElementById('ct-success');
     const confirmEmail = document.getElementById('ct-confirm-email');
 
     const validators = {
-        'ct-firstname': (v) => v.trim().length >= 2        ? '' : 'Prénom trop court (min. 2 caractères)',
-        'ct-lastname' : (v) => v.trim().length >= 2        ? '' : 'Nom trop court (min. 2 caractères)',
-        'ct-email'    : (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Adresse email invalide',
-        'ct-message'  : (v) => v.trim().length >= 20       ? '' : 'Message trop court (min. 20 caractères)',
+        'ct-firstname': (v) => v.trim().length >= 2 ? '' : 'Prénom trop court (min. 2 caractères)',
+        'ct-lastname': (v) => v.trim().length >= 2 ? '' : 'Nom trop court (min. 2 caractères)',
+        'ct-email': (v) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v) ? '' : 'Adresse email invalide',
+        'ct-message': (v) => v.trim().length >= 20 ? '' : 'Message trop court (min. 20 caractères)',
     };
 
     const showError = (field, msg) => {
@@ -279,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
 
             // RGPD
-            const gdpr      = document.getElementById('ct-gdpr');
+            const gdpr = document.getElementById('ct-gdpr');
             const gdprError = document.getElementById('ct-gdpr-error');
             if (gdpr && !gdpr.checked) {
                 gdprError.textContent = 'Vous devez accepter la politique de confidentialité';
@@ -349,24 +299,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
         for (let i = 0; i < 18; i++) {
             const dot = document.createElement('span');
-            const angle  = (Math.PI * 2 / 18) * i;
+            const angle = (Math.PI * 2 / 18) * i;
             const radius = 60 + Math.random() * 60;
-            const size   = 4 + Math.random() * 4;
+            const size = 4 + Math.random() * 4;
             const isBlue = Math.random() < 0.5;
 
             Object.assign(dot.style, {
-                position  : 'fixed',
-                width     : `${size}px`,
-                height    : `${size}px`,
-                borderRadius : '50%',
-                background   : isBlue ? '#0066ff' : '#ffffff',
-                left      : `50%`,
-                top       : `50%`,
-                pointerEvents : 'none',
-                zIndex    : '9999',
-                transform : 'translate(-50%, -50%)',
+                position: 'fixed',
+                width: `${size}px`,
+                height: `${size}px`,
+                borderRadius: '50%',
+                background: isBlue ? '#0066ff' : '#ffffff',
+                left: `50%`,
+                top: `50%`,
+                pointerEvents: 'none',
+                zIndex: '9999',
+                transform: 'translate(-50%, -50%)',
                 transition: 'all 0.8s cubic-bezier(0.23,1,0.32,1)',
-                opacity   : '1',
+                opacity: '1',
             });
 
             document.body.appendChild(dot);
@@ -374,7 +324,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Trigger animation
             requestAnimationFrame(() => {
                 dot.style.transform = `translate(calc(-50% + ${Math.cos(angle) * radius}px), calc(-50% + ${Math.sin(angle) * radius}px))`;
-                dot.style.opacity   = '0';
+                dot.style.opacity = '0';
             });
 
             setTimeout(() => dot.remove(), 900);
@@ -404,13 +354,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const counters = document.querySelectorAll('.ct-proof-num[data-target]');
 
     const animateCounter = (el) => {
-        const target   = +el.dataset.target;
+        const target = +el.dataset.target;
         const duration = 1800;
-        const start    = performance.now();
+        const start = performance.now();
 
         const step = (now) => {
             const progress = Math.min((now - start) / duration, 1);
-            const eased    = 1 - Math.pow(1 - progress, 3);
+            const eased = 1 - Math.pow(1 - progress, 3);
             el.textContent = Math.round(eased * target);
             if (progress < 1) requestAnimationFrame(step);
         };
@@ -441,21 +391,21 @@ document.addEventListener('DOMContentLoaded', () => {
             // Pour la démo : notification visuelle
             const notif = document.createElement('div');
             Object.assign(notif.style, {
-                position  : 'fixed',
-                bottom    : '2rem',
-                right     : '2rem',
+                position: 'fixed',
+                bottom: '2rem',
+                right: '2rem',
                 background: 'rgba(0,102,255,0.95)',
-                color     : '#fff',
+                color: '#fff',
                 fontFamily: 'Plus Jakarta Sans, sans-serif',
-                fontSize  : '0.88rem',
+                fontSize: '0.88rem',
                 fontWeight: '700',
-                padding   : '1rem 1.5rem',
+                padding: '1rem 1.5rem',
                 borderRadius: '16px',
-                zIndex    : '10000',
+                zIndex: '10000',
                 backdropFilter: 'blur(10px)',
-                boxShadow : '0 8px 30px rgba(0,102,255,0.5)',
-                transform : 'translateY(80px)',
-                opacity   : '0',
+                boxShadow: '0 8px 30px rgba(0,102,255,0.5)',
+                transform: 'translateY(80px)',
+                opacity: '0',
                 transition: 'all 0.4s cubic-bezier(0.23,1,0.32,1)',
             });
             notif.textContent = '💬 Connexion au chat en cours…';
@@ -463,12 +413,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             requestAnimationFrame(() => {
                 notif.style.transform = 'translateY(0)';
-                notif.style.opacity   = '1';
+                notif.style.opacity = '1';
             });
 
             setTimeout(() => {
                 notif.style.transform = 'translateY(80px)';
-                notif.style.opacity   = '0';
+                notif.style.opacity = '0';
                 setTimeout(() => notif.remove(), 400);
             }, 3000);
         });
