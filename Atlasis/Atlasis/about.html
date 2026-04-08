@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis - À propos</title>
+    <meta name="description"
+        content="Découvrez Atlasis, une équipe passionnée dédiée à aider vos idées à grandir et prospérer.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="about.css">
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link active">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                        <li><a href="register.html">Inscription</a></li>
+                        <li><a href="checkout.html">Caisse</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero About Section -->
+    <section class="hero-about">
+        <!-- Video Background -->
+        <video class="hero-about-video" autoplay loop muted playsinline>
+            <source src="assets/about-particles.mp4" type="video/mp4">
+        </video>
+
+        <!-- Overlay -->
+        <div class="hero-about-overlay"></div>
+
+        <!-- Content -->
+        <div class="hero-about-content">
+            <!-- Badge + Title -->
+            <div class="hero-about-main">
+                <div class="about-badge reveal stagger-1">
+                    <span class="badge-dot"></span>
+                    <span class="badge-text">About us</span>
+                </div>
+
+                <h1 class="hero-about-title reveal stagger-2">
+                    Architectes de votre innovation.
+                </h1>
+            </div>
+
+            <!-- Partners -->
+            <div class="hero-about-partners reveal stagger-3">
+                <p class="partners-intro">S'associer aux plus grandes entreprises mondiales</p>
+                <div class="partners-marquee">
+                    <div class="partners-track">
+                        <!-- Group 1 -->
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:google"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:microsoft"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:amazon"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:meta"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:apple"></iconify-icon>
+                        </div>
+                        <!-- Group 2 (Duplicate for seamless loop) -->
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:google"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:microsoft"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:amazon"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:meta"></iconify-icon>
+                        </div>
+                        <div class="partner-logo">
+                            <iconify-icon icon="logos:apple"></iconify-icon>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== ABOUT FEATURES SECTION ====== -->
+    <section class="about-features" id="about-features">
+        <div class="container">
+
+            <!-- Header -->
+            <div class="about-features-header reveal stagger-1">
+                <span class="about-features-label">Notre approche</span>
+                <h2 class="about-features-title">
+                    Une collaboration qui crée<br>de la valeur pour tous
+                </h2>
+            </div>
+
+            <!-- 6 Columns Grid -->
+            <div class="about-features-grid reveal">
+
+                <!-- Col 1 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:handshake-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">Partenariat durable</h3>
+                    <p class="about-feature-desc">Nous construisons des relations à long terme fondées sur la confiance
+                        mutuelle et des objectifs partagés.</p>
+                </div>
+
+                <!-- Col 2 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:chart-2-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">Croissance mesurable</h3>
+                    <p class="about-feature-desc">Chaque initiative est pilotée par la donnée pour générer des résultats
+                        concrets et quantifiables.</p>
+                </div>
+
+                <!-- Col 3 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">Sécurité renforcée</h3>
+                    <p class="about-feature-desc">Vos données et infrastructures sont protégées par des standards de
+                        sécurité de niveau entreprise.</p>
+                </div>
+
+                <!-- Col 4 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">IA au cœur</h3>
+                    <p class="about-feature-desc">Notre plateforme intègre l'intelligence artificielle à chaque étape
+                        pour automatiser et optimiser.</p>
+                </div>
+
+                <!-- Col 5 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:users-group-rounded-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">Équipes alignées</h3>
+                    <p class="about-feature-desc">Facilitez la collaboration entre vos équipes grâce à des outils pensés
+                        pour la coordination et la transparence.</p>
+                </div>
+
+                <!-- Col 6 -->
+                <div class="about-feature-item">
+                    <div class="about-feature-icon">
+                        <iconify-icon icon="solar:global-bold-duotone"></iconify-icon>
+                    </div>
+                    <h3 class="about-feature-title">Portée mondiale</h3>
+                    <p class="about-feature-desc">Déployez vos solutions à l'échelle mondiale avec une infrastructure
+                        cloud distribuée sur tous les continents.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== TIMELINE / HISTORY SECTION ====== -->
+    <section class="about-timeline" id="about-timeline">
+
+        <!-- Floating background orbs -->
+        <div class="timeline-orb timeline-orb--1"></div>
+        <div class="timeline-orb timeline-orb--2"></div>
+
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="timeline-header reveal stagger-1">
+                <span class="timeline-label">Notre histoire</span>
+                <h2 class="timeline-title">
+                    De nos débuts modestes<br>à ce que nous sommes aujourd'hui
+                </h2>
+                <p class="timeline-subtitle">
+                    Chaque étape de notre parcours a été façonnée par une conviction : la technologie doit servir les
+                    humains, pas l'inverse.
+                </p>
+            </div>
+
+            <!-- Timeline Body -->
+            <div class="timeline-body">
+
+                <!-- Left sticky column -->
+                <div class="timeline-left reveal stagger-2">
+                    <p class="timeline-left-text">Construire avec confiance — innover avec vision et rigueur à chaque
+                        étape.</p>
+                    <div class="timeline-progress-track">
+                        <div class="timeline-progress-fill"></div>
+                    </div>
+                </div>
+
+                <!-- Right milestones grid -->
+                <div class="timeline-right">
+
+                    <div class="timeline-row">
+                        <div class="timeline-card reveal stagger-1">
+                            <span class="timeline-year">2020</span>
+                            <p class="timeline-card-desc">Fondation d'Atlasis avec une première suite d'outils cloud IA.
+                                Nos premiers clients pionniers nous font confiance pour automatiser leurs
+                                infrastructures critiques.</p>
+                        </div>
+                        <div class="timeline-card reveal stagger-2">
+                            <span class="timeline-year">2021</span>
+                            <p class="timeline-card-desc">Extension des capacités avec des outils de collaboration en
+                                temps réel, permettant à des équipes distribuées de travailler de manière fluide et
+                                synchronisée.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-card reveal stagger-3">
+                            <span class="timeline-year">2022</span>
+                            <p class="timeline-card-desc">Introduction des analytics avancées et des tableaux de bord
+                                prédictifs, donnant à nos clients une vision 360° de leurs performances en temps réel.
+                            </p>
+                        </div>
+                        <div class="timeline-card reveal stagger-4">
+                            <span class="timeline-year">2023</span>
+                            <p class="timeline-card-desc">Intégration transparente avec plus de 200 outils tiers et
+                                plateformes, centralisant la gestion de projet et boostant la productivité à grande
+                                échelle.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-row">
+                        <div class="timeline-card reveal stagger-5">
+                            <span class="timeline-year">2024</span>
+                            <p class="timeline-card-desc">Lancement des modules d'automatisation avancée qui réduisent
+                                les tâches répétitives de 60%, libérant les équipes pour des missions à plus forte
+                                valeur ajoutée.</p>
+                        </div>
+                        <div class="timeline-card reveal stagger-6">
+                            <span class="timeline-year">2025</span>
+                            <p class="timeline-card-desc">Refonte UX pilotée par l'IA, optimisation mobile complète et
+                                déploiement de notre moteur de recommandation intelligent pour anticiper les besoins
+                                clients.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ====== TEAM SECTION ====== -->
+    <section class="about-team" id="about-team">
+
+        <div class="team-bg-orb"></div>
+
+        <div class="container">
+
+            <!-- Header -->
+            <div class="about-team-header reveal stagger-1">
+                <span class="about-team-label">Notre équipe</span>
+                <h2 class="about-team-title">Les esprits qui<br>façonnent notre avenir</h2>
+                <p class="about-team-subtitle">Une équipe pluridisciplinaire réunie autour d'une mission commune :
+                    repousser les frontières de l'infrastructure cloud.</p>
+            </div>
+
+            <!-- Interactive list + photo -->
+            <div class="team-interactive">
+
+                <!-- Left: member list -->
+                <ul class="team-list" role="list">
+                    <li class="team-list-item active" data-index="0">
+                        <button class="team-list-btn" aria-label="Voir Marc Dupont">
+                            <span class="team-item-role">Directeur Général</span>
+                            <span class="team-item-name">Marc Dupont</span>
+                        </button>
+                        <div class="team-item-line"></div>
+                    </li>
+                    <li class="team-list-item" data-index="1">
+                        <button class="team-list-btn" aria-label="Voir Sofia Chen">
+                            <span class="team-item-role">Directrice Technique</span>
+                            <span class="team-item-name">Sofia Chen</span>
+                        </button>
+                        <div class="team-item-line"></div>
+                    </li>
+                    <li class="team-list-item" data-index="2">
+                        <button class="team-list-btn" aria-label="Voir Karim Benali">
+                            <span class="team-item-role">Directeur des Opérations</span>
+                            <span class="team-item-name">Karim Benali</span>
+                        </button>
+                        <div class="team-item-line"></div>
+                    </li>
+                    <li class="team-list-item" data-index="3">
+                        <button class="team-list-btn" aria-label="Voir Léa Martin">
+                            <span class="team-item-role">Responsable Produit</span>
+                            <span class="team-item-name">Léa Martin</span>
+                        </button>
+                        <div class="team-item-line"></div>
+                    </li>
+                    <li class="team-list-item" data-index="4">
+                        <button class="team-list-btn" aria-label="Voir James Okafor">
+                            <span class="team-item-role">Lead Data Scientist</span>
+                            <span class="team-item-name">James Okafor</span>
+                        </button>
+                        <div class="team-item-line"></div>
+                    </li>
+                </ul>
+
+                <!-- Right: photo panel -->
+                <div class="team-photo-panel reveal stagger-2">
+                    <div class="team-photo-frame">
+                        <img src="https://i.pravatar.cc/800?u=marc" alt="Marc Dupont" class="team-photo active"
+                            data-index="0">
+                        <img src="https://i.pravatar.cc/800?u=sofia" alt="Sofia Chen" class="team-photo" data-index="1">
+                        <img src="https://i.pravatar.cc/800?u=karimb" alt="Karim Benali" class="team-photo"
+                            data-index="2">
+                        <img src="https://i.pravatar.cc/800?u=lea" alt="Léa Martin" class="team-photo" data-index="3">
+                        <img src="https://i.pravatar.cc/800?u=james" alt="James Okafor" class="team-photo"
+                            data-index="4">
+
+                        <div class="team-photo-badge">
+                            <span class="badge-member-role">Directeur Général</span>
+                            <span class="badge-member-name">Marc Dupont</span>
+                        </div>
+                    </div>
+                    <div class="team-photo-deco"></div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ====== FINAL CTA SECTION ====== -->
+    <div class="section-divider"></div>
+    <section class="cta-section" id="cta">
+        <canvas class="cta-particles" aria-hidden="true"></canvas>
+
+        <div class="cta-wrapper">
+            <div class="cta-col-text reveal stagger-1">
+
+                <div class="cta-badge">
+                    <span class="cta-badge-dot"></span>
+                    <span>Plateforme Cloud IA</span>
+                </div>
+
+                <h2 class="cta-heading">
+                    Passez à la vitesse supérieure avec notre <em class="cta-outline">infrastructure IA</em>
+                </h2>
+
+                <p class="cta-para">
+                    Déployez vos plateformes en quelques secondes, optimisez vos développements et sécurisez vos réseaux
+                    partout dans le monde.
+                </p>
+
+                <div class="cta-actions">
+                    <a href="#" class="btn btn-primary btn-flip" data-front="→ Démarrer maintenant"
+                        data-back="C'est parti !"></a>
+                    <a href="pricing.html" class="btn btn-secondary btn-flip" data-front="Voir les tarifs"
+                        data-back="Nos offres"></a>
+                </div>
+
+            </div>
+
+            <div class="cta-col-images reveal stagger-2">
+                <div class="cta-stage">
+                    <figure class="cta-card cta-card--back">
+                        <img src="assets/cta-image-02.avif" alt="Dashboard Atlasis – aperçu">
+                    </figure>
+                    <figure class="cta-card cta-card--front">
+                        <img src="assets/cta-image-01.avif" alt="Dashboard Atlasis – principal">
+                    </figure>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Footer Top -->
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">
+                        Propulsons ensemble vos infrastructures cloud vers l'avenir avec l'IA.
+                    </p>
+                </div>
+
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produits</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="index.html#integrations">Intégrations</a></li>
+                            <li><a href="index.html#pricing">Tarifs</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom reveal stagger-2">
+                <p class="footer-copyright">© 2025 Atlasis. Tous droits réservés.</p>
+
+                <div class="footer-legal">
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Conditions d'utilisation</a>
+                </div>
+
+                <div class="footer-social">
+                    <a href="#"><iconify-icon icon="mdi:twitter"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="mdi:linkedin"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="mdi:github"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

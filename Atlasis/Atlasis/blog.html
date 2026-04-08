@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog — Atlasis</title>
+    <meta name="description"
+        content="Explorez nos dernières actualités, guides et ressources sur l'IA, le Cloud et la technologie.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="blog.css">
+</head>
+
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                        <li><a href="register.html">Inscription</a></li>
+                        <li><a href="checkout.html">Caisse</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====== HERO BLOG ====== -->
+        <section class="bl-hero">
+            <!-- Canvas particules -->
+            <canvas class="bl-canvas" aria-hidden="true"></canvas>
+
+            <!-- Grille décorative -->
+            <div class="bl-hero-grid" aria-hidden="true"></div>
+
+            <!-- Orbes -->
+            <div class="bl-orb bl-orb--1" aria-hidden="true"></div>
+            <div class="bl-orb bl-orb--2" aria-hidden="true"></div>
+            <div class="bl-orb bl-orb--3" aria-hidden="true"></div>
+
+            <div class="bl-hero-content container">
+                <div class="bl-badge fade-in">
+                    <span class="bl-badge-dot"></span>
+                    <span>Actualités du blog récentes</span>
+                </div>
+
+                <h1 class="bl-hero-title fade-in-up">
+                    Explorez nos articles<br>les plus <em class="bl-title-em">récents</em>
+                </h1>
+
+                <p class="bl-hero-desc fade-in-up-delay">
+                    Ressources, guides et insights pour rester à la pointe de l'innovation cloud, IA et automatisation.
+                </p>
+
+                <!-- Search bar -->
+                <div class="bl-search-wrap fade-in-up-delay-2">
+                    <div class="bl-search">
+                        <iconify-icon icon="solar:magnifer-linear" class="bl-search-icon"></iconify-icon>
+                        <input type="text" id="bl-search-input" placeholder="Rechercher un article…" autocomplete="off">
+                        <button class="bl-search-btn">Rechercher</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== FILTRES CATÉGORIES ====== -->
+        <section class="bl-filters-section">
+            <div class="container">
+                <div class="bl-filters">
+                    <button class="bl-filter-btn active" data-cat="all">Tous les articles</button>
+                    <button class="bl-filter-btn" data-cat="ia">Intelligence Artificielle</button>
+                    <button class="bl-filter-btn" data-cat="cloud">Cloud & Infra</button>
+                    <button class="bl-filter-btn" data-cat="data">Data & Analytics</button>
+                    <button class="bl-filter-btn" data-cat="strategy">Stratégie</button>
+                    <button class="bl-filter-btn" data-cat="securite">Sécurité</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== ARTICLE VEDETTE ====== -->
+        <section class="bl-featured-section">
+            <div class="container">
+                <article class="bl-featured-card reveal stagger-1" data-cat="ia">
+                    <div class="bl-featured-image">
+                        <img src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=1200&q=80"
+                            alt="IA Générative">
+                        <div class="bl-featured-overlay"></div>
+                        <span class="bl-cat-tag bl-cat-ia">Intelligence Artificielle</span>
+                    </div>
+                    <div class="bl-featured-content">
+                        <div class="bl-featured-meta">
+                            <span class="bl-meta-item">
+                                <iconify-icon icon="solar:calendar-linear"></iconify-icon>
+                                12 Jan, 2026
+                            </span>
+                            <span class="bl-meta-sep">·</span>
+                            <span class="bl-meta-item">
+                                <iconify-icon icon="solar:clock-circle-linear"></iconify-icon>
+                                8 min de lecture
+                            </span>
+                        </div>
+                        <h2 class="bl-featured-title">L'IA Générative révolutionne l'infrastructure cloud : ce que vous
+                            devez savoir en 2026</h2>
+                        <p class="bl-featured-excerpt">Les modèles de langage avancés ne se contentent plus de générer
+                            du texte — ils orchestrent désormais des pipelines de données, gèrent des clusters et
+                            optimisent les coûts en temps réel.</p>
+                        <div class="bl-featured-footer">
+                            <div class="bl-author-row">
+                                <img src="https://i.pravatar.cc/150?u=sophie" alt="Sophie Laurent" class="bl-avatar">
+                                <div>
+                                    <span class="bl-author-name">Sophie Laurent</span>
+                                    <span class="bl-author-role">CTO chez Atlasis</span>
+                                </div>
+                            </div>
+                            <a href="blog-detail.html?id=ia-infrastructure" class="bl-read-more">
+                                Lire l'article
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ====== GRILLE D'ARTICLES ====== -->
+        <section class="bl-grid-section" id="articles">
+            <div class="container">
+
+                <div class="bl-section-header reveal stagger-1">
+                    <h2 class="bl-section-title">Tous les articles</h2>
+                    <p class="bl-section-sub" id="bl-count">9 articles publiés</p>
+                </div>
+
+                <div class="bl-grid" id="bl-grid">
+
+                    <!-- Article 1 -->
+                    <article class="bl-card reveal stagger-2" data-cat="data">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=600&q=80"
+                                alt="Culture data">
+                            <span class="bl-cat-tag bl-cat-data">Data & Analytics</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=john" alt="John Smith">
+                                    <span>John Smith</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Comment construire des processus et des systèmes qui créent une
+                                culture axée sur les données.</h3>
+                            <p class="bl-card-excerpt">Transformer une organisation autour de la donnée nécessite bien
+                                plus que des outils — cela demande une refonte profonde de la culture.</p>
+                            <a href="blog-detail.html?id=culture-data" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="bl-card reveal stagger-3" data-cat="data">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80"
+                                alt="Organisation data">
+                            <span class="bl-cat-tag bl-cat-data">Data & Analytics</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=evelyn" alt="Evelyn Parker">
+                                    <span>Evelyn Parker</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Créer une organisation axée sur les données : Systèmes, Processus.
+                            </h3>
+                            <p class="bl-card-excerpt">Des systèmes robustes et des processus clairs sont les piliers
+                                d'une organisation véritablement data-driven.</p>
+                            <a href="blog-detail.html?id=organisation-data" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="bl-card reveal stagger-4" data-cat="strategy">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80"
+                                alt="Culture décision">
+                            <span class="bl-cat-tag bl-cat-strategy">Stratégie</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=lucas" alt="Lucas Morgan">
+                                    <span>Lucas Morgan</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Construire une culture où les données guident chaque décision.
+                            </h3>
+                            <p class="bl-card-excerpt">La prise de décision data-driven n'est pas qu'une méthode — c'est
+                                un changement de mentalité qui doit être cultivé à tous les niveaux.</p>
+                            <a href="blog-detail.html?id=culture-decision" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="bl-card reveal stagger-2" data-cat="strategy">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=600&q=80"
+                                alt="Productivité équipe">
+                            <span class="bl-cat-tag bl-cat-strategy">Stratégie</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=sophia" alt="Sophia Reed">
+                                    <span>Sophia Reed</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Créer des workflows qui boostent la productivité et l'efficacité
+                                des équipes.</h3>
+                            <p class="bl-card-excerpt">L'optimisation des flux de travail est l'un des leviers les plus
+                                puissants pour libérer le potentiel de vos équipes.</p>
+                            <a href="blog-detail.html?id=workflows-productivite" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="bl-card reveal stagger-3" data-cat="ia">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1655720031554-a929595ffad7?w=600&q=80"
+                                alt="Innovation IA">
+                            <span class="bl-cat-tag bl-cat-ia">Intelligence Artificielle</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=daniel" alt="Daniel Hughes">
+                                    <span>Daniel Hughes</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Implémenter des stratégies qui stimulent l'innovation et la
+                                croissance business.</h3>
+                            <p class="bl-card-excerpt">L'IA n'est plus un avantage compétitif — c'est un prérequis.
+                                Voici comment définir une feuille de route pragmatique.</p>
+                            <a href="blog-detail.html?id=strategies-innovation" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="bl-card reveal stagger-4" data-cat="cloud">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=600&q=80"
+                                alt="Cloud collaboration">
+                            <span class="bl-cat-tag bl-cat-cloud">Cloud & Infra</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=isabella" alt="Isabella Clarke">
+                                    <span>Isabella Clarke</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Concevoir des systèmes qui améliorent la collaboration entre
+                                départements.</h3>
+                            <p class="bl-card-excerpt">Une architecture cloud bien pensée brise les silos et permet une
+                                collaboration fluide entre toutes les équipes.</p>
+                            <a href="blog-detail.html?id=systemes-collaboration" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 7 -->
+                    <article class="bl-card reveal stagger-2" data-cat="data">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80"
+                                alt="Décisions éclairées">
+                            <span class="bl-cat-tag bl-cat-data">Data & Analytics</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=nathan" alt="Nathan Cole">
+                                    <span>Nathan Cole</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Comment exploiter les données pour prendre des décisions plus
+                                intelligentes.</h3>
+                            <p class="bl-card-excerpt">Des dashboards en temps réel aux modèles prédictifs — voici les
+                                outils et méthodes qui transforment vos données en avantages stratégiques.</p>
+                            <a href="blog-detail.html?id=decisions-intelligentes" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 8 -->
+                    <article class="bl-card reveal stagger-3" data-cat="cloud">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80"
+                                alt="Scalabilité cloud">
+                            <span class="bl-cat-tag bl-cat-cloud">Cloud & Infra</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=chloe" alt="Chloé Bennett">
+                                    <span>Chloé Bennett</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Construire des processus scalables qui soutiennent le succès à
+                                long terme.</h3>
+                            <p class="bl-card-excerpt">La scalabilité n'est pas un luxe réservé aux grandes entreprises
+                                — c'est un fondement que toute organisation croissante doit intégrer dès le départ.</p>
+                            <a href="blog-detail.html?id=scalabilite-cloud" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                    <!-- Article 9 -->
+                    <article class="bl-card reveal stagger-4" data-cat="securite">
+                        <div class="bl-card-image">
+                            <img src="https://images.unsplash.com/photo-1614064641938-3bbee52942c7?w=600&q=80"
+                                alt="Sécurité performance">
+                            <span class="bl-cat-tag bl-cat-securite">Sécurité</span>
+                        </div>
+                        <div class="bl-card-body">
+                            <div class="bl-card-meta">
+                                <span><iconify-icon icon="solar:calendar-linear"></iconify-icon> 6 Sep, 2025</span>
+                                <div class="bl-card-author">
+                                    <img src="https://i.pravatar.cc/150?u=lucas2" alt="Lucas Morgan">
+                                    <span>Lucas Morgan</span>
+                                </div>
+                            </div>
+                            <h3 class="bl-card-title">Optimiser les opérations pour maximiser les performances et les
+                                résultats.</h3>
+                            <p class="bl-card-excerpt">La cybersécurité et la performance ne s'opposent plus — découvrez
+                                comment les architectures Zero Trust boostent aussi l'efficacité opérationnelle.</p>
+                            <a href="blog-detail.html?id=optimiser-operations" class="bl-card-link">
+                                Lire la suite
+                                <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                            </a>
+                        </div>
+                    </article>
+
+                </div><!-- /bl-grid -->
+
+                <!-- No results -->
+                <div class="bl-no-results" id="bl-no-results" style="display:none;">
+                    <iconify-icon icon="solar:file-search-bold-duotone"></iconify-icon>
+                    <p>Aucun article trouvé pour cette recherche.</p>
+                </div>
+
+                <!-- Load more -->
+                <div class="bl-load-more-wrap reveal stagger-5">
+                    <button class="bl-load-more btn-flip" data-front="Charger plus d'articles" data-back="Chargement…"
+                        id="bl-load-more">
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====== NEWSLETTER ====== -->
+        <section class="bl-newsletter">
+            <canvas class="bl-nl-canvas" aria-hidden="true"></canvas>
+            <div class="bl-nl-glow" aria-hidden="true"></div>
+            <div class="container">
+                <div class="bl-nl-inner reveal stagger-1">
+                    <div class="bl-badge">
+                        <span class="bl-badge-dot"></span>
+                        <span>Newsletter Atlasis</span>
+                    </div>
+                    <h2 class="bl-nl-title">Ne manquez aucune<br><em class="bl-title-em">actualité cloud & IA</em></h2>
+                    <p class="bl-nl-desc">Rejoignez plus de 12 000 professionnels qui reçoivent chaque semaine nos
+                        insights tech directement dans leur boîte mail.</p>
+                    <form class="bl-nl-form" id="bl-nl-form">
+                        <input type="email" placeholder="votre@email.com" required>
+                        <button type="submit" class="btn btn-primary btn-flip" data-front="→ S'abonner"
+                            data-back="C'est parti !"></button>
+                    </form>
+                    <p class="bl-nl-note">Pas de spam. Désabonnement en 1 clic.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CTA FINAL ====== -->
+        <section class="cta-section" id="cta">
+            <canvas class="cta-particles" aria-hidden="true"></canvas>
+            <div class="cta-wrapper">
+                <div class="cta-col-text reveal stagger-1">
+                    <div class="cta-badge">
+                        <span class="cta-badge-dot"></span>
+                        <span>Plateforme Cloud IA</span>
+                    </div>
+                    <h2 class="cta-heading">
+                        Passez à la vitesse supérieure avec notre <em class="cta-outline">infrastructure IA</em>
+                    </h2>
+                    <p class="cta-para">
+                        Déployez vos plateformes en quelques secondes, optimisez vos développements et sécurisez vos
+                        réseaux partout dans le monde.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn btn-primary btn-flip" data-front="→ Démarrer maintenant"
+                            data-back="C'est parti !"></a>
+                        <a href="pricing.html" class="btn btn-secondary btn-flip" data-front="Voir les tarifs"
+                            data-back="Nos offres"></a>
+                    </div>
+                </div>
+                <div class="cta-col-images reveal stagger-2">
+                    <div class="cta-stage">
+                        <figure class="cta-card cta-card--back">
+                            <img src="assets/cta-image-02.avif" alt="Dashboard Atlasis – aperçu">
+                        </figure>
+                        <figure class="cta-card cta-card--front">
+                            <img src="assets/cta-image-01.avif" alt="Dashboard Atlasis – principal">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <iconify-icon icon="solar:layers-bold-duotone"></iconify-icon>
+                        Atlasis
+                    </a>
+                    <p class="footer-desc">Solutions technologiques innovantes pour<br>les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="#features">Fonctionnalités</a></li>
+                            <li><a href="#integrations">Intégrations</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                            <li><a href="#">Mises à jour</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Centre d'aide</a></li>
+                            <li><a href="#">Tutoriels vidéos</a></li>
+                            <li><a href="#">Communauté</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">&copy; 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#" aria-label="LinkedIn"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#" aria-label="Github"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="blog.js"></script>
+
+</body>
+
+</html>

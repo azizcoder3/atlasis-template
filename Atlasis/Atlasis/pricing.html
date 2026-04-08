@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis — Tarifs</title>
+    <meta name="description"
+        content="Des tarifs simples et transparents. Choisissez le plan Atlasis qui correspond à votre équipe.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pricing.css">
+</head>
+
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link active">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                        <li><a href="register.html">Inscription</a></li>
+                        <li><a href="checkout.html">Caisse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====================================================
+             HERO PRICING
+             ==================================================== -->
+        <section class="pr-hero">
+            <canvas class="pr-canvas" aria-hidden="true"></canvas>
+            <div class="pr-hero-grid" aria-hidden="true"></div>
+            <div class="pr-orb pr-orb--1"></div>
+            <div class="pr-orb pr-orb--2"></div>
+
+            <div class="container pr-hero-content">
+
+                <div class="pr-badge reveal stagger-1">
+                    <span class="pr-badge-dot"></span>
+                    <span>Tarification</span>
+                </div>
+
+                <h1 class="pr-hero-title reveal stagger-2">
+                    Des plans simples,<br>
+                    <span class="pr-title-gradient">transparents</span> et flexibles
+                </h1>
+
+                <p class="pr-hero-desc reveal stagger-3">
+                    Sans frais cachés. Sans contrat long terme. Changez de plan à tout moment.
+                </p>
+
+                <!-- Toggle mensuel / annuel -->
+                <div class="pr-toggle-wrap reveal stagger-4">
+                    <span class="pr-toggle-label pr-toggle-label--active" id="pr-label-monthly">Mensuel</span>
+                    <label class="pr-switch" for="pr-toggle">
+                        <input type="checkbox" id="pr-toggle">
+                        <span class="pr-slider"></span>
+                    </label>
+                    <span class="pr-toggle-label" id="pr-label-annual">
+                        Annuel
+                        <span class="pr-save-badge">−20%</span>
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             PRICING CARDS — 3 plans
+             ==================================================== -->
+        <section class="pr-plans" id="plans">
+            <div class="container">
+                <div class="pr-plans-grid">
+
+                    <!-- ── STARTER ── -->
+                    <div class="pr-card reveal stagger-1">
+                        <div class="pr-card-glow"></div>
+                        <div class="pr-card-head">
+                            <div class="pr-card-icon">
+                                <iconify-icon icon="solar:rocket-bold-duotone"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="pr-plan-name">Starter</h3>
+                                <p class="pr-plan-tag">Pour démarrer</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-price-block">
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-amount" data-monthly="99" data-annual="79">99</span>
+                                <span class="pr-period">/ mois</span>
+                            </div>
+                            <p class="pr-price-note">Facturé mensuellement</p>
+                        </div>
+
+                        <p class="pr-plan-desc">Idéal pour les freelances et petites équipes qui veulent démarrer vite
+                            avec l'IA.</p>
+
+                        <ul class="pr-features">
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Jusqu'à 5 utilisateurs</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>10 GB de stockage cloud</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>API REST — 50k requêtes/mois</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Analytics de base</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Support email 48h</span>
+                            </li>
+                            <li class="pr-feature pr-feature--off">
+                                <iconify-icon icon="solar:close-circle-bold-duotone"></iconify-icon>
+                                <span>IA prédictive avancée</span>
+                            </li>
+                            <li class="pr-feature pr-feature--off">
+                                <iconify-icon icon="solar:close-circle-bold-duotone"></iconify-icon>
+                                <span>SLA 99.9% garanti</span>
+                            </li>
+                            <li class="pr-feature pr-feature--off">
+                                <iconify-icon icon="solar:close-circle-bold-duotone"></iconify-icon>
+                                <span>Déploiement multi-région</span>
+                            </li>
+                        </ul>
+
+                        <a href="register.html" class="pr-card-btn pr-card-btn--outline btn-flip"
+                            data-front="Commencer gratuitement" data-back="C'est parti !"></a>
+                    </div>
+
+                    <!-- ── PRO (featured) ── -->
+                    <div class="pr-card pr-card--featured reveal stagger-2">
+                        <div class="pr-card-glow"></div>
+                        <div class="pr-popular-badge">
+                            <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                            Le plus populaire
+                        </div>
+
+                        <div class="pr-card-head">
+                            <div class="pr-card-icon pr-card-icon--featured">
+                                <iconify-icon icon="solar:cpu-bolt-bold-duotone"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="pr-plan-name">Pro</h3>
+                                <p class="pr-plan-tag">Pour les équipes</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-price-block">
+                            <div class="pr-price">
+                                <span class="pr-currency">$</span>
+                                <span class="pr-amount" data-monthly="299" data-annual="239">299</span>
+                                <span class="pr-period">/ mois</span>
+                            </div>
+                            <p class="pr-price-note">Facturé mensuellement</p>
+                        </div>
+
+                        <p class="pr-plan-desc">La puissance complète d'Atlasis pour des équipes en forte croissance.
+                        </p>
+
+                        <ul class="pr-features">
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Jusqu'à 25 utilisateurs</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>100 GB de stockage cloud</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>API REST — 500k requêtes/mois</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Analytics avancées + rapports IA</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Support prioritaire 24h</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>IA prédictive avancée</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>SLA 99.9% garanti</span>
+                            </li>
+                            <li class="pr-feature pr-feature--off">
+                                <iconify-icon icon="solar:close-circle-bold-duotone"></iconify-icon>
+                                <span>Déploiement multi-région</span>
+                            </li>
+                        </ul>
+
+                        <a href="checkout.html" class="pr-card-btn pr-card-btn--solid btn-flip"
+                            data-front="→ Démarrer maintenant" data-back="C'est parti !"></a>
+                    </div>
+
+                    <!-- ── ENTERPRISE ── -->
+                    <div class="pr-card reveal stagger-3">
+                        <div class="pr-card-glow"></div>
+                        <div class="pr-card-head">
+                            <div class="pr-card-icon">
+                                <iconify-icon icon="solar:buildings-3-bold-duotone"></iconify-icon>
+                            </div>
+                            <div>
+                                <h3 class="pr-plan-name">Enterprise</h3>
+                                <p class="pr-plan-tag">Pour les grandes orgs</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-price-block">
+                            <div class="pr-price pr-price--custom">
+                                <span class="pr-amount-custom">Sur devis</span>
+                            </div>
+                            <p class="pr-price-note">Tarification adaptée à votre volume</p>
+                        </div>
+
+                        <p class="pr-plan-desc">Infrastructure dédiée, SLA personnalisé et équipe dédiée pour vos enjeux
+                            critiques.</p>
+
+                        <ul class="pr-features">
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Utilisateurs illimités</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Stockage illimité & dédié</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>API illimitée — priorité maximale</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Analytics custom + BI intégré</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Support dédié 24/7 + CSM</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>IA prédictive avancée</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>SLA 99.99% personnalisé</span>
+                            </li>
+                            <li class="pr-feature pr-feature--on">
+                                <iconify-icon icon="solar:check-circle-bold-duotone"></iconify-icon>
+                                <span>Déploiement multi-région</span>
+                            </li>
+                        </ul>
+
+                        <a href="contact.html" class="pr-card-btn pr-card-btn--outline btn-flip"
+                            data-front="Contacter les ventes" data-back="On vous rappelle !"></a>
+                    </div>
+
+                </div>
+
+                <!-- Reassurance strip -->
+                <div class="pr-reassure reveal stagger-4">
+                    <div class="pr-reassure-item">
+                        <iconify-icon icon="solar:shield-check-bold-duotone"></iconify-icon>
+                        <span>Essai 14 jours sans CB</span>
+                    </div>
+                    <div class="pr-reassure-sep"></div>
+                    <div class="pr-reassure-item">
+                        <iconify-icon icon="solar:refresh-circle-bold-duotone"></iconify-icon>
+                        <span>Annulation à tout moment</span>
+                    </div>
+                    <div class="pr-reassure-sep"></div>
+                    <div class="pr-reassure-item">
+                        <iconify-icon icon="solar:lock-bold-duotone"></iconify-icon>
+                        <span>Paiement 100% sécurisé</span>
+                    </div>
+                    <div class="pr-reassure-sep"></div>
+                    <div class="pr-reassure-item">
+                        <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                        <span>Support humain inclus</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             TABLEAU COMPARATIF
+             ==================================================== -->
+        <section class="pr-compare" id="compare">
+            <div class="container">
+
+                <div class="pr-compare-header reveal stagger-1">
+                    <span class="pr-label">Comparatif</span>
+                    <h2 class="pr-compare-title">Tout ce qui est inclus,<br>plan par plan</h2>
+                </div>
+
+                <div class="pr-table-wrap reveal stagger-2">
+                    <table class="pr-table">
+                        <thead>
+                            <tr>
+                                <th class="pr-th-feature">Fonctionnalité</th>
+                                <th class="pr-th-plan">Starter</th>
+                                <th class="pr-th-plan pr-th-featured">Pro <span class="pr-th-badge">Populaire</span>
+                                </th>
+                                <th class="pr-th-plan">Enterprise</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="pr-tr-group">
+                                <td colspan="4" class="pr-group-label">Infrastructure</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Utilisateurs</td>
+                                <td>5</td>
+                                <td class="pr-td-featured">25</td>
+                                <td>Illimité</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Stockage cloud</td>
+                                <td>10 GB</td>
+                                <td class="pr-td-featured">100 GB</td>
+                                <td>Illimité</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Régions de déploiement</td>
+                                <td>1</td>
+                                <td class="pr-td-featured">3</td>
+                                <td>Toutes</td>
+                            </tr>
+                            <tr class="pr-tr-group">
+                                <td colspan="4" class="pr-group-label">Intelligence Artificielle</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Requêtes API / mois</td>
+                                <td>50 000</td>
+                                <td class="pr-td-featured">500 000</td>
+                                <td>Illimitées</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">IA prédictive avancée</td>
+                                <td class="pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Auto-scaling IA</td>
+                                <td class="pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                            <tr class="pr-tr-group">
+                                <td colspan="4" class="pr-group-label">Sécurité & Conformité</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Chiffrement end-to-end</td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">SLA garanti</td>
+                                <td>99.5%</td>
+                                <td class="pr-td-featured">99.9%</td>
+                                <td>99.99%</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Conformité RGPD</td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Zero-Trust natif</td>
+                                <td class="pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                            <tr class="pr-tr-group">
+                                <td colspan="4" class="pr-group-label">Support</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Canal de support</td>
+                                <td>Email</td>
+                                <td class="pr-td-featured">Email + Chat</td>
+                                <td>Dédié 24/7</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Temps de réponse</td>
+                                <td>48h</td>
+                                <td class="pr-td-featured">4h</td>
+                                <td>30 min</td>
+                            </tr>
+                            <tr>
+                                <td class="pr-td-feature">Customer Success Manager</td>
+                                <td class="pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-featured pr-td-no"><iconify-icon
+                                        icon="solar:close-circle-bold-duotone"></iconify-icon></td>
+                                <td class="pr-td-yes"><iconify-icon
+                                        icon="solar:check-circle-bold-duotone"></iconify-icon></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr class="pr-tfoot">
+                                <td></td>
+                                <td><a href="#" class="pr-table-btn">Choisir Starter</a></td>
+                                <td class="pr-td-featured"><a href="#"
+                                        class="pr-table-btn pr-table-btn--featured">Choisir Pro</a></td>
+                                <td><a href="#" class="pr-table-btn">Contacter</a></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             FAQ SECTION
+             ==================================================== -->
+        <section class="pr-faq" id="pr-faq">
+            <div class="container">
+
+                <div class="pr-faq-wrap">
+                    <div class="pr-faq-left reveal stagger-1">
+                        <span class="pr-label">FAQ</span>
+                        <h2 class="pr-faq-title">Des questions<br>sur nos tarifs ?</h2>
+                        <p class="pr-faq-sub">Notre équipe est disponible pour répondre à toutes vos questions.</p>
+                        <a href="#" class="pr-faq-contact">
+                            <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                            Parler à un expert →
+                        </a>
+                    </div>
+
+                    <div class="pr-faq-right reveal stagger-2">
+
+                        <div class="pr-faq-item">
+                            <button class="pr-faq-q" aria-expanded="false">
+                                <span>Puis-je changer de plan à tout moment ?</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="pr-faq-chevron"></iconify-icon>
+                            </button>
+                            <div class="pr-faq-a">
+                                <p>Oui. Vous pouvez upgrader ou downgrader votre plan à n'importe quel moment depuis
+                                    votre espace client. Les changements prennent effet immédiatement et la facturation
+                                    est ajustée au prorata.</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-faq-item">
+                            <button class="pr-faq-q" aria-expanded="false">
+                                <span>Y a-t-il une période d'essai gratuite ?</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="pr-faq-chevron"></iconify-icon>
+                            </button>
+                            <div class="pr-faq-a">
+                                <p>Tous les plans incluent 14 jours d'essai gratuit, sans carte bancaire requise. Accès
+                                    complet aux fonctionnalités du plan choisi pendant toute la durée de l'essai.</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-faq-item">
+                            <button class="pr-faq-q" aria-expanded="false">
+                                <span>Quels modes de paiement acceptez-vous ?</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="pr-faq-chevron"></iconify-icon>
+                            </button>
+                            <div class="pr-faq-a">
+                                <p>Nous acceptons toutes les cartes bancaires principales (Visa, Mastercard, Amex), les
+                                    virements SEPA pour l'Europe, et PayPal. Pour le plan Enterprise, nous proposons
+                                    aussi la facturation sur bon de commande.</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-faq-item">
+                            <button class="pr-faq-q" aria-expanded="false">
+                                <span>Que se passe-t-il si je dépasse les limites ?</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="pr-faq-chevron"></iconify-icon>
+                            </button>
+                            <div class="pr-faq-a">
+                                <p>Nous vous avertissons à 80% de votre quota. Vous pouvez soit upgrader votre plan,
+                                    soit acheter des packs supplémentaires à la carte. Nous ne coupons jamais le service
+                                    sans préavis.</p>
+                            </div>
+                        </div>
+
+                        <div class="pr-faq-item">
+                            <button class="pr-faq-q" aria-expanded="false">
+                                <span>Proposez-vous des remises pour les startups ou ONGs ?</span>
+                                <iconify-icon icon="solar:alt-arrow-down-linear" class="pr-faq-chevron"></iconify-icon>
+                            </button>
+                            <div class="pr-faq-a">
+                                <p>Oui. Nous avons un programme spécial pour les startups early-stage, les ONGs et les
+                                    institutions éducatives. Contactez-nous directement avec votre justificatif pour
+                                    obtenir jusqu'à 50% de réduction.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ====================================================
+             CTA FINAL
+             ==================================================== -->
+        <section class="pr-cta">
+            <canvas class="pr-cta-canvas" aria-hidden="true"></canvas>
+            <div class="pr-cta-glow"></div>
+
+            <div class="container pr-cta-inner">
+                <div class="pr-cta-content reveal stagger-1">
+                    <h2 class="pr-cta-title">
+                        Prêt à transformer<br>votre <em class="pr-cta-em">infrastructure</em>&nbsp;?
+                    </h2>
+                    <p class="pr-cta-desc">14 jours gratuits · Aucune carte requise · Annulation en 1 clic</p>
+                    <div class="pr-cta-actions">
+                        <a href="#" class="btn btn-primary btn-flip" data-front="→ Démarrer gratuitement"
+                            data-back="C'est parti !"></a>
+                        <a href="#compare" class="btn btn-secondary btn-flip" data-front="Comparer les plans"
+                            data-back="Voir le tableau"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ====== FOOTER ====== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">Solutions technologiques innovantes pour les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">© 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="pricing.js"></script>
+
+</body>
+
+</html>

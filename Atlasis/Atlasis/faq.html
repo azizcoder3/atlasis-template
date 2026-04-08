@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ — Atlasis</title>
+    <meta name="description"
+        content="Toutes les réponses à vos questions sur Atlasis, notre plateforme cloud IA, nos tarifs, notre support et nos intégrations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="faq.css">
+</head>
+
+<body>
+
+    <!-- ====== HEADER ====== -->
+    <header class="header">
+        <nav class="nav container">
+            <a href="index.html" class="logo">
+                <!-- Emplacement pour le futur logo en image -->
+                <!-- Il suffit de remplir le 'src' et de supprimer le 'style="display: none"' pour l'activer -->
+                <img src="assets/logo.png" alt="Atlasis Logo" class="logo-img" style="display: none;">
+
+                <!-- Bloc logo actuel (Icone CSS + Texte) -->
+                <div class="logo-elements">
+                    <div class="logo-icon"></div>
+                    <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                </div>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link nav-link--active">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                        <li><a href="register.html">Inscription</a></li>
+                        <li><a href="checkout.html">Caisse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ====== HERO FAQ ====== -->
+        <section class="fq-hero">
+            <canvas class="fq-canvas" aria-hidden="true"></canvas>
+            <div class="fq-hero-grid" aria-hidden="true"></div>
+            <div class="fq-orb fq-orb--1" aria-hidden="true"></div>
+            <div class="fq-orb fq-orb--2" aria-hidden="true"></div>
+            <div class="fq-orb fq-orb--3" aria-hidden="true"></div>
+            <div class="fq-line fq-line--left" aria-hidden="true"></div>
+            <div class="fq-line fq-line--right" aria-hidden="true"></div>
+
+            <div class="fq-hero-content container">
+                <div class="fq-badge fade-in">
+                    <span class="fq-badge-dot"></span>
+                    <span>Centre d'aide Atlasis</span>
+                </div>
+
+                <h1 class="fq-hero-title fade-in-up">
+                    Vous avez des <em class="fq-title-em">questions</em> ?<br>Nous avons les réponses.
+                </h1>
+
+                <p class="fq-hero-desc fade-in-up-delay">
+                    Parcourez nos catégories ou utilisez la recherche pour trouver rapidement ce dont vous avez besoin.
+                </p>
+
+                <div class="fq-search-wrap fade-in-up-delay-2">
+                    <div class="fq-search" id="fq-search-box">
+                        <iconify-icon icon="solar:magnifer-linear" class="fq-search-icon"></iconify-icon>
+                        <input type="text" id="fq-search-input" placeholder="Rechercher une question…"
+                            autocomplete="off" aria-label="Rechercher une question">
+                        <kbd class="fq-search-kbd">⌘K</kbd>
+                    </div>
+                    <p class="fq-search-hint" id="fq-search-hint"></p>
+                </div>
+
+                <div class="fq-stats fade-in-up-delay-2">
+                    <div class="fq-stat">
+                        <span class="fq-stat-num" data-count="24">0</span>
+                        <span class="fq-stat-label">Questions répondues</span>
+                    </div>
+                    <div class="fq-stat-sep"></div>
+                    <div class="fq-stat">
+                        <span class="fq-stat-num" data-count="6">0</span>
+                        <span class="fq-stat-label">Catégories</span>
+                    </div>
+                    <div class="fq-stat-sep"></div>
+                    <div class="fq-stat">
+                        <span class="fq-stat-num" data-count="2" data-suffix=" min">0</span>
+                        <span class="fq-stat-label">Temps de réponse moyen</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="fq-scroll-indicator fade-in-up-delay-2">
+                <span>Explorer</span>
+                <div class="fq-scroll-arrow">
+                    <iconify-icon icon="solar:alt-arrow-down-linear"></iconify-icon>
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== NAVIGATION CATÉGORIES ====== -->
+        <section class="fq-cats-section">
+            <div class="container">
+                <div class="fq-cats-grid">
+
+                    <button class="fq-cat-card active" data-cat="general">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:info-circle-bold-duotone"></iconify-icon>
+                        </div>
+                        <span class="fq-cat-name">Général</span>
+                        <span class="fq-cat-count">5 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                    <button class="fq-cat-card" data-cat="tarifs">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:card-bold-duotone"></iconify-icon></div>
+                        <span class="fq-cat-name">Tarifs</span>
+                        <span class="fq-cat-count">4 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                    <button class="fq-cat-card" data-cat="technique">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:code-bold-duotone"></iconify-icon></div>
+                        <span class="fq-cat-name">Technique</span>
+                        <span class="fq-cat-count">4 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                    <button class="fq-cat-card" data-cat="securite">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:shield-keyhole-bold-duotone"></iconify-icon>
+                        </div>
+                        <span class="fq-cat-name">Sécurité</span>
+                        <span class="fq-cat-count">4 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                    <button class="fq-cat-card" data-cat="support">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                        </div>
+                        <span class="fq-cat-name">Support</span>
+                        <span class="fq-cat-count">4 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                    <button class="fq-cat-card" data-cat="ia">
+                        <div class="fq-cat-icon"><iconify-icon icon="solar:cpu-bold-duotone"></iconify-icon></div>
+                        <span class="fq-cat-name">IA & Cloud</span>
+                        <span class="fq-cat-count">3 questions</span>
+                        <div class="fq-cat-hover-line"></div>
+                    </button>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CORPS FAQ ====== -->
+        <section class="fq-body-section" id="faq-body">
+            <div class="container">
+                <div class="fq-layout">
+
+                    <!-- Sidebar sticky -->
+                    <aside class="fq-sidebar">
+                        <div class="fq-sidebar-inner">
+                            <h3 class="fq-sidebar-title">Catégories</h3>
+                            <nav class="fq-sidebar-nav" id="fq-sidebar-nav">
+                                <a href="#cat-general" class="fq-sidebar-link active" data-cat="general">
+                                    <iconify-icon icon="solar:info-circle-bold-duotone"></iconify-icon>
+                                    Général
+                                    <span class="fq-sidebar-badge">5</span>
+                                </a>
+                                <a href="#cat-tarifs" class="fq-sidebar-link" data-cat="tarifs">
+                                    <iconify-icon icon="solar:card-bold-duotone"></iconify-icon>
+                                    Tarifs & Abonnements
+                                    <span class="fq-sidebar-badge">4</span>
+                                </a>
+                                <a href="#cat-technique" class="fq-sidebar-link" data-cat="technique">
+                                    <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+                                    Technique & API
+                                    <span class="fq-sidebar-badge">4</span>
+                                </a>
+                                <a href="#cat-securite" class="fq-sidebar-link" data-cat="securite">
+                                    <iconify-icon icon="solar:shield-keyhole-bold-duotone"></iconify-icon>
+                                    Sécurité
+                                    <span class="fq-sidebar-badge">4</span>
+                                </a>
+                                <a href="#cat-support" class="fq-sidebar-link" data-cat="support">
+                                    <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                                    Support
+                                    <span class="fq-sidebar-badge">4</span>
+                                </a>
+                                <a href="#cat-ia" class="fq-sidebar-link" data-cat="ia">
+                                    <iconify-icon icon="solar:cpu-bold-duotone"></iconify-icon>
+                                    IA & Cloud
+                                    <span class="fq-sidebar-badge">3</span>
+                                </a>
+                            </nav>
+
+                            <div class="fq-sidebar-contact">
+                                <div class="fq-sidebar-contact-icon">
+                                    <iconify-icon icon="solar:headphones-round-bold-duotone"></iconify-icon>
+                                </div>
+                                <p>Vous ne trouvez pas votre réponse ?</p>
+                                <a href="#" class="fq-sidebar-contact-btn">
+                                    Contacter le support
+                                    <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- Contenu principal -->
+                    <div class="fq-main" id="fq-main">
+
+                        <div class="fq-no-results" id="fq-no-results" style="display:none;">
+                            <iconify-icon icon="solar:magnifer-bold-duotone"></iconify-icon>
+                            <h3>Aucun résultat trouvé</h3>
+                            <p>Essayez d'autres mots-clés ou <a href="#">contactez notre support</a>.</p>
+                        </div>
+
+                        <!-- ── Général ── -->
+                        <div class="fq-cat-group reveal" id="cat-general" data-cat="general">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:info-circle-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">Général</h2>
+                                    <p class="fq-cat-sub">Questions fréquentes sur Atlasis et notre mission</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item" data-keywords="identité marque site web clients confiance">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Pourquoi une identité de marque forte est-elle
+                                            importante ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Une identité de marque robuste et un site web soigné constituent le
+                                                visage de votre entreprise. Ils façonnent la perception de vos clients
+                                                potentiels, transmettent votre professionnalisme et instaurent un climat
+                                                de confiance crucial dans le marché compétitif actuel.</p>
+                                            <p>Une marque cohérente peut augmenter les revenus jusqu'à
+                                                <strong>23%</strong> selon les études sectorielles.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="résultats délai seo campagne mois">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Combien de temps faut-il pour voir des résultats
+                                            ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Les délais varient selon les objectifs. Pour le SEO et l'image de marque,
+                                                les premiers changements notables apparaissent entre 3 et 6 mois. Pour
+                                                les campagnes publicitaires ou le déploiement d'infrastructures, les
+                                                résultats peuvent être quasi immédiats.</p>
+                                            <ul class="fq-list">
+                                                <li><iconify-icon icon="solar:bolt-bold-duotone"></iconify-icon>
+                                                    <strong>Déploiement infra :</strong> sous 24 heures
+                                                </li>
+                                                <li><iconify-icon icon="solar:chart-bold-duotone"></iconify-icon>
+                                                    <strong>Campagnes publicitaires :</strong> 2–4 semaines
+                                                </li>
+                                                <li><iconify-icon icon="solar:graph-up-bold-duotone"></iconify-icon>
+                                                    <strong>SEO & branding :</strong> 3–6 mois
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="clients internationaux europe asie fuseau">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Travaillez-vous avec des clients internationaux ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Absolument. Atlasis est une entreprise tournée vers l'international. Nous
+                                                accompagnons des partenaires en Europe, en Amérique du Nord et en Asie,
+                                                avec des équipes capables de gérer différents fuseaux horaires et
+                                                exigences locales.</p>
+                                            <p>Notre infrastructure est déployée sur <strong>12 régions
+                                                    mondiales</strong> pour garantir latence minimale et conformité
+                                                réglementaire locale.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="secteurs fintech cybersécurité ia industrie">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Dans quels secteurs d'activité vous spécialisez-vous
+                                            ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Bien que nous ayons une expertise poussée en Fintech, IA et
+                                                Cybersécurité, nos solutions technologiques sont modulables et
+                                                s'adaptent à presque tous les secteurs en quête d'une transformation
+                                                digitale performante.</p>
+                                            <div class="fq-tags">
+                                                <span>Fintech</span><span>IA & ML</span><span>Cybersécurité</span>
+                                                <span>Santé</span><span>Retail</span><span>Industrie 4.0</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="atlasis fondée équipe mission vision histoire">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Qui est derrière Atlasis ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Atlasis a été fondée en 2009 par une équipe d'ingénieurs et de
+                                                visionnaires du cloud. Aujourd'hui, nous sommes plus de <strong>200
+                                                    collaborateurs</strong> répartis dans 8 pays, avec un objectif
+                                                simple — propulser vos ambitions vers de nouveaux sommets.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ── Tarifs ── -->
+                        <div class="fq-cat-group reveal" id="cat-tarifs" data-cat="tarifs">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:card-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">Tarifs & Abonnements</h2>
+                                    <p class="fq-cat-sub">Tout savoir sur nos plans, paiements et annulations</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item" data-keywords="annuler abonnement résiliation mensuel contrat">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Puis-je annuler mon abonnement à tout moment ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui, nous proposons des contrats mensuels flexibles pour la plupart de
+                                                nos services. Les plans Entreprise peuvent avoir des conditions
+                                                spécifiques, mais nous privilégions toujours une structure adaptée à la
+                                                croissance à long terme de votre entreprise.</p>
+                                            <p>Aucun frais de résiliation pour les plans Starter et Pro. La résiliation
+                                                prend effet à la fin de la période facturée en cours.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item"
+                                    data-keywords="essai gratuit trial période test sans carte bancaire">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Y a-t-il une période d'essai gratuite ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui ! Tous nos plans bénéficient d'un essai de <strong>14 jours sans
+                                                    carte bancaire requise</strong>. Vous avez accès à l'ensemble des
+                                                fonctionnalités du plan choisi pendant toute la durée de l'essai.</p>
+                                            <p>À l'issue de la période d'essai, votre compte passe automatiquement en
+                                                version gratuite limitée, sans facturation surprise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="changer plan upgrade downgrade migration tarif">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Puis-je changer de plan en cours d'abonnement ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Absolument. Vous pouvez upgrader ou downgrader votre plan à tout moment
+                                                depuis votre tableau de bord. L'ajustement est calculé au prorata du
+                                                nombre de jours restants dans votre cycle de facturation actuel.</p>
+                                            <p>Les upgrades sont instantanés. Les downgrades prennent effet à la
+                                                prochaine date de renouvellement.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="paiement méthode carte virement facturation">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Quels modes de paiement acceptez-vous ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Nous acceptons toutes les cartes de crédit/débit majeures (Visa,
+                                                Mastercard, Amex), les virements SEPA pour les clients européens, et le
+                                                paiement par facture pour les plans Enterprise.</p>
+                                            <div class="fq-payment-icons">
+                                                <iconify-icon icon="logos:visa" title="Visa"></iconify-icon>
+                                                <iconify-icon icon="logos:mastercard" title="Mastercard"></iconify-icon>
+                                                <iconify-icon icon="logos:stripe" title="Stripe"></iconify-icon>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ── Technique ── -->
+                        <div class="fq-cat-group reveal" id="cat-technique" data-cat="technique">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:code-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">Technique & API</h2>
+                                    <p class="fq-cat-sub">Intégrations, performances et architecture</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item" data-keywords="api intégration connexion outils développeur sdk">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment fonctionne l'intégration avec mes outils
+                                            existants ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Atlasis propose une API REST complète et des webhooks pour s'intégrer à
+                                                n'importe quel système existant. Nous disposons également de connecteurs
+                                                natifs pour les principaux outils du marché.</p>
+                                            <div class="fq-integrations-preview">
+                                                <span><iconify-icon icon="logos:github-icon"></iconify-icon>
+                                                    GitHub</span>
+                                                <span><iconify-icon icon="logos:slack-icon"></iconify-icon> Slack</span>
+                                                <span><iconify-icon icon="logos:aws"></iconify-icon> AWS</span>
+                                                <span><iconify-icon icon="logos:kubernetes"></iconify-icon> K8s</span>
+                                                <span class="fq-more">+80 autres</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="uptime sla disponibilité garantie">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Quel est votre SLA de disponibilité ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Nous garantissons un uptime de <strong>99.9%</strong> pour les plans Pro
+                                                et de <strong>99.99%</strong> pour les plans Enterprise, avec
+                                                compensation financière en cas de dépassement.</p>
+                                            <div class="fq-uptime-bar">
+                                                <div class="fq-uptime-fill"></div>
+                                                <span>99.9% uptime garanti</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="migration données import export transfert">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment migrer mes données vers Atlasis ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre équipe d'onboarding vous accompagne à chaque étape de la migration.
+                                                Nous supportons les imports depuis AWS, Azure, GCP et les formats CSV,
+                                                JSON, Parquet et SQL.</p>
+                                            <p>Pour les volumes importants (&gt; 1TB), nous proposons un service de
+                                                migration assistée avec un ingénieur dédié, <strong>inclus dans le plan
+                                                    Enterprise</strong>.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="performance latence vitesse région déploiement">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Quelle est la latence de vos services cloud ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre réseau de <strong>12 points de présence</strong> mondiaux garantit
+                                                une latence inférieure à 50ms pour 95% des requêtes.</p>
+                                            <ul class="fq-list">
+                                                <li><iconify-icon icon="solar:routing-2-bold-duotone"></iconify-icon>
+                                                    Europe de l'Ouest : &lt; 18ms</li>
+                                                <li><iconify-icon icon="solar:routing-2-bold-duotone"></iconify-icon>
+                                                    Amérique du Nord : &lt; 28ms</li>
+                                                <li><iconify-icon icon="solar:routing-2-bold-duotone"></iconify-icon>
+                                                    Asie-Pacifique : &lt; 45ms</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ── Sécurité ── -->
+                        <div class="fq-cat-group reveal" id="cat-securite" data-cat="securite">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:shield-keyhole-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">Sécurité & Confidentialité</h2>
+                                    <p class="fq-cat-sub">Protection de vos données et conformité réglementaire</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item" data-keywords="données sécurité chiffrement protection RGPD">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment mes données sont-elles protégées ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Toutes vos données sont chiffrées en transit (TLS 1.3) et au repos
+                                                (AES-256). Nous utilisons une architecture Zero Trust avec contrôle
+                                                d'accès granulaire, audit logs immuables et isolation complète par
+                                                tenant.</p>
+                                            <div class="fq-certif-row">
+                                                <span class="fq-certif">SOC 2 Type II</span>
+                                                <span class="fq-certif">ISO 27001</span>
+                                                <span class="fq-certif">RGPD</span>
+                                                <span class="fq-certif">HIPAA</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="RGPD conformité europe données personnelles">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Êtes-vous conformes au RGPD ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui, Atlasis est entièrement conforme au RGPD. Nos serveurs européens
+                                                sont hébergés dans des datacenters certifiés en France et en Allemagne.
+                                                Nous proposons un DPA standard et pouvons en négocier un sur mesure pour
+                                                les clients Enterprise.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="accès contrôle rôles permissions 2FA MFA SSO">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment gérer les accès et permissions de mon équipe
+                                            ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre système RBAC vous permet de définir des rôles précis et d'attribuer
+                                                des permissions granulaires à chaque membre. Nous supportons SSO (SAML
+                                                2.0, OIDC) et l'authentification MFA obligatoire.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="sauvegarde backup récupération disaster recovery">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Proposez-vous des sauvegardes et un plan de reprise
+                                            d'activité ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Toutes les données sont sauvegardées automatiquement toutes les heures
+                                                sur des infrastructures géographiquement séparées. Notre RPO est de 1
+                                                heure et notre RTO est inférieur à 4 heures pour les plans Enterprise.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ── Support ── -->
+                        <div class="fq-cat-group reveal" id="cat-support" data-cat="support">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:chat-round-dots-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">Support & Accompagnement</h2>
+                                    <p class="fq-cat-sub">Comment notre équipe vous aide au quotidien</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item" data-keywords="support aide heures contact email chat téléphone">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment contacter votre équipe de support ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre support est disponible via chat en direct (dans l'app), par email
+                                                et par téléphone pour les plans Enterprise.</p>
+                                            <ul class="fq-list">
+                                                <li><iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                                                    <strong>Starter :</strong> réponse sous 24h (email)
+                                                </li>
+                                                <li><iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                                                    <strong>Pro :</strong> réponse sous 4h (chat + email)
+                                                </li>
+                                                <li><iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                                                    <strong>Enterprise :</strong> support dédié 24/7
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item"
+                                    data-keywords="onboarding formation démarrage tutoriel documentation">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Proposez-vous un accompagnement à l'onboarding ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui. Chaque nouveau client bénéficie d'une session d'onboarding
+                                                personnalisée avec un ingénieur solution, d'une documentation complète
+                                                et de webinaires mensuels.</p>
+                                            <p>Pour les plans Enterprise, un Customer Success Manager dédié vous
+                                                accompagne tout au long de votre parcours client.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="formation certification programme apprentissage">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Existe-t-il un programme de certification Atlasis
+                                            ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui ! Notre programme Atlasis Certified Professional (ACP) vous permet de
+                                                valider votre maîtrise de la plateforme. Les certifications sont
+                                                disponibles en 3 niveaux : Foundational, Advanced et Expert, reconnues
+                                                par nos partenaires internationaux.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="communauté forum Discord utilisateurs partage">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Y a-t-il une communauté d'utilisateurs Atlasis ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre communauté regroupe plus de <strong>15 000 professionnels</strong>
+                                                sur Discord et notre forum dédié. Vous y trouverez des partages
+                                                d'expérience, des templates et les dernières actualités produit.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- ── IA & Cloud ── -->
+                        <div class="fq-cat-group reveal" id="cat-ia" data-cat="ia">
+                            <div class="fq-cat-header">
+                                <div class="fq-cat-header-icon"><iconify-icon
+                                        icon="solar:cpu-bold-duotone"></iconify-icon></div>
+                                <div>
+                                    <h2 class="fq-cat-title">IA & Cloud</h2>
+                                    <p class="fq-cat-sub">Technologies d'intelligence artificielle et infrastructure</p>
+                                </div>
+                            </div>
+                            <div class="fq-accordion">
+
+                                <div class="fq-item"
+                                    data-keywords="intelligence artificielle modèle IA machine learning">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Quels types de modèles d'IA proposez-vous ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre catalogue inclut des modèles pré-entraînés pour la classification,
+                                                la détection d'anomalies, la prévision de séries temporelles et le
+                                                traitement du langage naturel.</p>
+                                            <div class="fq-tags">
+                                                <span>NLP / LLM</span><span>Computer Vision</span><span>Time
+                                                    Series</span>
+                                                <span>Anomaly Detection</span><span>Recommandation</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item" data-keywords="GPU cloud calcul entraînement modèle ressources">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Proposez-vous des ressources GPU pour l'entraînement de
+                                            modèles ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Oui. Notre infrastructure inclut des pools GPU NVIDIA A100 et H100
+                                                accessibles à la demande. La facturation est à la seconde et vous
+                                                bénéficiez d'une réduction allant jusqu'à <strong>60%</strong> avec les
+                                                instances réservées.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="fq-item"
+                                    data-keywords="automatisation workflow pipeline MLOps DevOps déploiement">
+                                    <button class="fq-q" aria-expanded="false">
+                                        <span class="fq-q-text">Comment fonctionne l'automatisation des workflows IA
+                                            ?</span>
+                                        <span class="fq-q-icon"><iconify-icon
+                                                icon="solar:alt-arrow-down-linear"></iconify-icon></span>
+                                    </button>
+                                    <div class="fq-a">
+                                        <div class="fq-a-inner">
+                                            <p>Notre moteur d'orchestration MLOps permet de créer des pipelines
+                                                entièrement automatisés, du preprocessing au déploiement en production.
+                                                L'intégration native avec GitHub Actions, GitLab CI et Jenkins facilite
+                                                l'adoption dans vos processus DevOps existants.</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div><!-- /fq-main -->
+                </div><!-- /fq-layout -->
+            </div>
+        </section>
+
+        <!-- ====== SECTION CONTACT ====== -->
+        <section class="fq-contact-section">
+            <div class="container">
+                <div class="fq-contact-header reveal stagger-1">
+                    <span class="fq-contact-label">Besoin d'aide supplémentaire ?</span>
+                    <h2 class="fq-contact-title">Nous sommes là pour vous</h2>
+                    <p class="fq-contact-sub">Notre équipe d'experts répond à toutes vos questions, quelle que soit leur
+                        complexité.</p>
+                </div>
+
+                <div class="fq-contact-grid reveal stagger-2">
+
+                    <div class="fq-contact-card">
+                        <div class="fq-contact-card-icon">
+                            <iconify-icon icon="solar:chat-round-dots-bold-duotone"></iconify-icon>
+                        </div>
+                        <h3>Chat en direct</h3>
+                        <p>Notre équipe est disponible du lundi au vendredi, de 9h à 18h CET. Réponse garantie sous 2
+                            minutes.</p>
+                        <a href="#" class="fq-contact-btn fq-contact-btn--outline">
+                            Démarrer un chat
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                        <span class="fq-online-badge">
+                            <span class="fq-online-dot"></span>
+                            En ligne maintenant
+                        </span>
+                    </div>
+
+                    <div class="fq-contact-card fq-contact-card--featured">
+                        <div class="fq-contact-card-glow"></div>
+                        <div class="fq-contact-card-icon">
+                            <iconify-icon icon="solar:letter-bold-duotone"></iconify-icon>
+                        </div>
+                        <h3>Envoyer un e-mail</h3>
+                        <p>Décrivez votre problème en détail et recevez une réponse approfondie de nos experts dans les
+                            4 heures.</p>
+                        <a href="mailto:support@atlasis.io" class="fq-contact-btn fq-contact-btn--accent">
+                            support@atlasis.io
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                    </div>
+
+                    <div class="fq-contact-card">
+                        <div class="fq-contact-card-icon">
+                            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p>Explorez notre base de connaissances complète avec plus de 500 articles, guides et tutoriels
+                            vidéo.</p>
+                        <a href="#" class="fq-contact-btn fq-contact-btn--outline">
+                            Accéder aux docs
+                            <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ====== CTA FINAL ====== -->
+        <section class="cta-section" id="cta">
+            <canvas class="cta-particles" aria-hidden="true"></canvas>
+            <div class="cta-wrapper">
+                <div class="cta-col-text reveal stagger-1">
+                    <div class="cta-badge">
+                        <span class="cta-badge-dot"></span>
+                        <span>Plateforme Cloud IA</span>
+                    </div>
+                    <h2 class="cta-heading">
+                        Passez à la vitesse supérieure avec notre <em class="cta-outline">infrastructure IA</em>
+                    </h2>
+                    <p class="cta-para">
+                        Déployez vos plateformes en quelques secondes, optimisez vos développements et sécurisez vos
+                        réseaux partout dans le monde.
+                    </p>
+                    <div class="cta-actions">
+                        <a href="#" class="btn btn-primary btn-flip" data-front="→ Démarrer maintenant"
+                            data-back="C'est parti !"></a>
+                        <a href="pricing.html" class="btn btn-secondary btn-flip" data-front="Voir les tarifs"
+                            data-back="Nos offres"></a>
+                    </div>
+                </div>
+                <div class="cta-col-images reveal stagger-2">
+                    <div class="cta-stage">
+                        <figure class="cta-card cta-card--back">
+                            <img src="assets/cta-image-02.avif" alt="Dashboard Atlasis – aperçu">
+                        </figure>
+                        <figure class="cta-card cta-card--front">
+                            <img src="assets/cta-image-01.avif" alt="Dashboard Atlasis – principal">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <iconify-icon icon="solar:layers-bold-duotone"></iconify-icon>
+                        Atlasis
+                    </a>
+                    <p class="footer-desc">Solutions technologiques innovantes pour<br>les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="#features">Fonctionnalités</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                            <li><a href="#">Intégrations</a></li>
+                            <li><a href="#">Mises à jour</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="blog.html">Blog</a></li>
+                            <li><a href="#">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="#">Tutoriels vidéos</a></li>
+                            <li><a href="#">Communauté</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">&copy; 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Politique de confidentialité</a>
+                    <a href="#">Cookies</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#" aria-label="Twitter"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#" aria-label="LinkedIn"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#" aria-label="Github"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="faq.js"></script>
+
+</body>
+
+</html>

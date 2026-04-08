@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atlasis — Détail Intégration</title>
+    <meta name="description" content="Détail de l'intégration Atlasis. Configuration, fonctionnalités et installation.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="integrations.css">
+
+</head>
+
+<body>
+
+    <!-- ═══════ HEADER ═══════ -->
+    <header class="header">
+        <nav class="nav container">
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <span class="logo-text">Atlasis<span class="dot">.</span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Accueil</a></li>
+                <li><a href="about.html" class="nav-link">À propos</a></li>
+                <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+                <li><a href="pricing.html" class="nav-link">Tarifs</a></li>
+                <li><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="dropdown">
+                    <a href="#" class="nav-link">Pages
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </a>
+                    <!-- Sous-menu -->
+                    <ul class="dropdown-menu">
+                        <li><a href="blog-detail.html?id=ia-infrastructure">Blog Détail</a></li>
+                        <li><a href="integrations.html">Intégration</a></li>
+                        <li><a href="integration-detail.html?id=overlay">Intégration Détail</a></li>
+                        <li><a href="register.html">Inscription</a></li>
+                        <li><a href="checkout.html">Caisse</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="nav-actions">
+                <a href="contact.html" class="btn btn-primary-nav">Nous contacter</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- ═══════════════════════════════════════
+             HERO DÉTAIL
+        ════════════════════════════════════════ -->
+        <section class="igd-hero">
+            <canvas class="ig-canvas" id="igd-canvas" aria-hidden="true"></canvas>
+            <div class="ig-hero-grid" aria-hidden="true"></div>
+            <div class="ig-orb ig-orb--1" aria-hidden="true"></div>
+
+            <div class="container igd-hero-inner">
+
+                <!-- Breadcrumb -->
+                <nav class="igd-breadcrumb reveal stagger-1" aria-label="Breadcrumb">
+                    <a href="integrations.html" class="igd-back">
+                        <iconify-icon icon="solar:arrow-left-linear"></iconify-icon>
+                        Toutes les intégrations
+                    </a>
+                    <span class="igd-breadcrumb-sep">/</span>
+                    <span class="igd-breadcrumb-current" id="igd-breadcrumb-name">Chargement…</span>
+                </nav>
+
+                <!-- Contenu principal du hero -->
+                <div class="igd-hero-body reveal stagger-2">
+
+                    <!-- Icône + méta -->
+                    <div class="igd-hero-left">
+                        <div class="igd-icon-wrap" id="igd-icon-wrap">
+                            <iconify-icon id="igd-main-icon" icon="solar:layers-bold-duotone"></iconify-icon>
+                            <div class="igd-icon-glow" aria-hidden="true"></div>
+                        </div>
+                    </div>
+
+                    <!-- Texte hero -->
+                    <div class="igd-hero-right">
+                        <div class="igd-meta">
+                            <span class="igd-category-badge" id="igd-category-badge">Cloud</span>
+                            <span class="igd-installs-badge">
+                                <iconify-icon icon="solar:download-minimalistic-bold-duotone"></iconify-icon>
+                                <span id="igd-installs">… installs</span>
+                            </span>
+                            <span class="igd-rating-badge">
+                                <iconify-icon icon="solar:star-bold-duotone"></iconify-icon>
+                                <span id="igd-rating">4.9</span>
+                            </span>
+                        </div>
+
+                        <h1 class="igd-title" id="igd-title">Chargement…</h1>
+                        <p class="igd-desc" id="igd-desc">Récupération des informations…</p>
+
+                        <div class="igd-hero-actions">
+                            <a href="#" class="btn btn-primary btn-flip" data-front="→ Installer l'intégration"
+                                data-back="Configurer →" id="igd-install-btn"></a>
+                            <a href="#igd-docs" class="btn btn-secondary btn-flip" data-front="Voir la documentation"
+                                data-back="Lire →"></a>
+                        </div>
+
+                        <!-- Tags -->
+                        <div class="igd-tags" id="igd-tags"></div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             CONTENU PRINCIPAL — 2 colonnes
+        ════════════════════════════════════════ -->
+        <section class="igd-content">
+            <div class="container igd-content-grid">
+
+                <!-- ── Colonne principale ── -->
+                <article class="igd-main reveal stagger-1">
+
+                    <!-- Mockup / aperçu visuel -->
+                    <div class="igd-mockup">
+                        <div class="igd-mockup-chrome">
+                            <span class="igd-chrome-dot igd-chrome-dot--r"></span>
+                            <span class="igd-chrome-dot igd-chrome-dot--y"></span>
+                            <span class="igd-chrome-dot igd-chrome-dot--g"></span>
+                            <span class="igd-chrome-url">
+                                <iconify-icon icon="solar:lock-bold-duotone"></iconify-icon>
+                                app.atlasis.io/integrations/<span id="igd-url-slug">…</span>
+                            </span>
+                        </div>
+                        <div class="igd-mockup-body">
+                            <div class="igd-mockup-left">
+                                <div class="igd-mockup-sidebar">
+                                    <div class="igd-ms-item igd-ms-item--active">
+                                        <iconify-icon icon="solar:home-bold-duotone"></iconify-icon>
+                                        Tableau de bord
+                                    </div>
+                                    <div class="igd-ms-item">
+                                        <iconify-icon icon="solar:settings-bold-duotone"></iconify-icon>
+                                        Configuration
+                                    </div>
+                                    <div class="igd-ms-item">
+                                        <iconify-icon icon="solar:chart-bold-duotone"></iconify-icon>
+                                        Analytics
+                                    </div>
+                                    <div class="igd-ms-item">
+                                        <iconify-icon icon="solar:bell-bold-duotone"></iconify-icon>
+                                        Alertes
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="igd-mockup-right">
+                                <div class="igd-mockup-header-bar">
+                                    <div class="igd-mockup-icon-badge" id="igd-mockup-icon">
+                                        <iconify-icon icon="solar:layers-bold-duotone"></iconify-icon>
+                                    </div>
+                                    <div>
+                                        <div class="igd-skel igd-skel--title"></div>
+                                        <div class="igd-skel igd-skel--sub"></div>
+                                    </div>
+                                    <div class="igd-mockup-status">
+                                        <span class="igd-status-dot"></span>
+                                        Connecté
+                                    </div>
+                                </div>
+                                <div class="igd-mockup-stats">
+                                    <div class="igd-mock-stat">
+                                        <span>Sync</span>
+                                        <strong>Temps réel</strong>
+                                    </div>
+                                    <div class="igd-mock-stat">
+                                        <span>Uptime</span>
+                                        <strong>99.9%</strong>
+                                    </div>
+                                    <div class="igd-mock-stat">
+                                        <span>Latence</span>
+                                        <strong>&lt; 50ms</strong>
+                                    </div>
+                                </div>
+                                <div class="igd-mockup-chart" aria-hidden="true">
+                                    <div class="igd-chart-bars">
+                                        <div class="igd-bar" style="--h:55%"></div>
+                                        <div class="igd-bar" style="--h:80%"></div>
+                                        <div class="igd-bar" style="--h:40%"></div>
+                                        <div class="igd-bar igd-bar--accent" style="--h:95%"></div>
+                                        <div class="igd-bar" style="--h:70%"></div>
+                                        <div class="igd-bar" style="--h:60%"></div>
+                                        <div class="igd-bar igd-bar--accent" style="--h:88%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contenu texte long -->
+                    <div class="igd-article" id="igd-article">
+                        <!-- Injecté via JS -->
+                    </div>
+
+                </article>
+
+                <!-- ── Sidebar ── -->
+                <aside class="igd-sidebar reveal stagger-2">
+
+                    <!-- Installation CLI -->
+                    <div class="igd-sidebar-card" id="igd-docs">
+                        <div class="igd-sc-head">
+                            <iconify-icon icon="solar:terminal-bold-duotone"></iconify-icon>
+                            <h3>Installation CLI</h3>
+                        </div>
+                        <p>Installez directement depuis votre terminal.</p>
+                        <div class="igd-code-block">
+                            <span class="igd-code-prompt">$</span>
+                            <code id="igd-cli-cmd">atlas install …</code>
+                            <button class="igd-copy-btn" id="igd-copy-btn" aria-label="Copier la commande">
+                                <iconify-icon icon="solar:copy-bold-duotone"></iconify-icon>
+                            </button>
+                        </div>
+                        <p class="igd-cli-note">
+                            <iconify-icon icon="solar:clock-circle-bold-duotone"></iconify-icon>
+                            Temps estimé : ~2 minutes
+                        </p>
+                    </div>
+
+                    <!-- Ressources -->
+                    <div class="igd-sidebar-card">
+                        <div class="igd-sc-head">
+                            <iconify-icon icon="solar:book-bold-duotone"></iconify-icon>
+                            <h3>Ressources</h3>
+                        </div>
+                        <ul class="igd-resources">
+                            <li>
+                                <a href="#">
+                                    <iconify-icon icon="solar:document-bold-duotone"></iconify-icon>
+                                    Documentation complète
+                                    <iconify-icon icon="solar:arrow-right-up-linear" class="igd-arrow"></iconify-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <iconify-icon icon="solar:code-bold-duotone"></iconify-icon>
+                                    Référence API
+                                    <iconify-icon icon="solar:arrow-right-up-linear" class="igd-arrow"></iconify-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <iconify-icon icon="solar:question-circle-bold-duotone"></iconify-icon>
+                                    Centre d'aide
+                                    <iconify-icon icon="solar:arrow-right-up-linear" class="igd-arrow"></iconify-icon>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <iconify-icon icon="solar:shield-warning-bold-duotone"></iconify-icon>
+                                    Politique de sécurité
+                                    <iconify-icon icon="solar:arrow-right-up-linear" class="igd-arrow"></iconify-icon>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Méta infos -->
+                    <div class="igd-sidebar-card igd-sidebar-meta">
+                        <div class="igd-sc-head">
+                            <iconify-icon icon="solar:info-circle-bold-duotone"></iconify-icon>
+                            <h3>Informations</h3>
+                        </div>
+                        <ul class="igd-meta-list">
+                            <li>
+                                <span>Version</span>
+                                <strong id="igd-version">2.4.1</strong>
+                            </li>
+                            <li>
+                                <span>Mise à jour</span>
+                                <strong>Jan 2026</strong>
+                            </li>
+                            <li>
+                                <span>Licence</span>
+                                <strong>MIT</strong>
+                            </li>
+                            <li>
+                                <span>Compatibilité</span>
+                                <strong>Node 18+</strong>
+                            </li>
+                            <li>
+                                <span>Catégorie</span>
+                                <strong id="igd-meta-category">Cloud</strong>
+                            </li>
+                        </ul>
+                    </div>
+
+                </aside>
+
+            </div>
+        </section>
+
+        <!-- ═══════════════════════════════════════
+             INTÉGRATIONS SIMILAIRES
+        ════════════════════════════════════════ -->
+        <section class="igd-similar">
+            <div class="container">
+                <div class="igd-similar-header reveal stagger-1">
+                    <h2 class="igd-similar-title">Intégrations similaires</h2>
+                    <a href="integrations.html" class="igd-see-all">
+                        Voir toutes
+                        <iconify-icon icon="solar:arrow-right-linear"></iconify-icon>
+                    </a>
+                </div>
+                <div class="ig-grid igd-similar-grid" id="igd-similar-grid">
+                    <!-- Injecté via JS -->
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ═══════ FOOTER ═══════ -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top reveal stagger-1">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon"></div>
+                        <span class="logo-text">Atlasis<span class="dot">.</span></span>
+                    </div>
+                    <p class="footer-desc">Solutions technologiques innovantes pour les entreprises de demain.</p>
+                </div>
+                <div class="footer-links-group">
+                    <div class="footer-links-col">
+                        <h4>Produit</h4>
+                        <ul>
+                            <li><a href="index.html#features">Fonctionnalités</a></li>
+                            <li><a href="solutions.html">Solutions</a></li>
+                            <li><a href="pricing.html">Tarifs</a></li>
+                            <li><a href="integrations.html">Intégrations</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Ressources</h4>
+                        <ul>
+                            <li><a href="index.html#blog">Blog</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-links-col">
+                        <h4>Entreprise</h4>
+                        <ul>
+                            <li><a href="about.html">À propos</a></li>
+                            <li><a href="#">Carrières</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom reveal stagger-2">
+                <p class="copyright">© 2026 Atlasis. Tous droits réservés.</p>
+                <div class="footer-legal">
+                    <a href="#">Conditions générales</a>
+                    <a href="#">Confidentialité</a>
+                </div>
+                <div class="footer-social">
+                    <a href="#"><iconify-icon icon="logos:twitter"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:linkedin-icon"></iconify-icon></a>
+                    <a href="#"><iconify-icon icon="logos:github-icon"></iconify-icon></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="integrations.js"></script>
+</body>
+
+</html>
